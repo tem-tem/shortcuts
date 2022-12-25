@@ -23,14 +23,14 @@
 
 <main>
 	<div class="header super">
-		<h1>Shortcuts</h1>
+		<h1>Default Shortcuts</h1>
 		<Switcher />
 	</div>
+	<Guide />
 	<div class="header">
 		<div />
 		<Reset />
 	</div>
-	<Guide />
 	<Keys />
 	<KeyDataSwitcher />
 	<Shortcuts />

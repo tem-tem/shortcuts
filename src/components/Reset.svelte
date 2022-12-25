@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { keys } from '$stores/keys';
+	import { fade } from 'svelte/transition';
 </script>
 
 {#if $keys.length > 0}
 	<button
+		in:fade={{ duration: 200 }}
 		on:click={() => {
 			keys.reset();
 		}}>Reset <span>Esc</span></button

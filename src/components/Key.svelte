@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fullInfo, os } from '$stores/ui';
 	import { getDisplaySymbol } from '$utils/helpers';
+	import { scale } from 'svelte/transition';
 
 	export let key: KeyboardEvent;
 
@@ -9,7 +10,7 @@
 	};
 </script>
 
-<kbd>
+<kbd in:scale={{duration: 200}}>
 	<span class="label">
 		{getDisplaySymbol(key, $os)}
 	</span>

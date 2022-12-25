@@ -87,12 +87,14 @@
 
 <style>
 	.cardsGrid {
-		display: none;
+		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		border-left: 0.5px solid;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
 	}
 	.show {
-		display: grid;
+		opacity: 1;
 	}
 	.divider {
 		border-top: 0.5px solid;

@@ -1,5 +1,5 @@
 <div class="header">
-	<span>Hit keys one by one to test a shortcut</span>
+	<span>Hit keys <u>one by one</u> to test a shortcut.</span>
 </div>
 
 <style>
