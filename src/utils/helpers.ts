@@ -109,3 +109,7 @@ export const getBrowserShortcutsJSON = (browser: Browser, os: OS): ShortcutsJSON
 			return safari;
 	}
 };
+
+export const isActionButton = (key: string) => {
+	return ['meta', 'shift', 'control', 'alt', ' '].includes(key);
+};

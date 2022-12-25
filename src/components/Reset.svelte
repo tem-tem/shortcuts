@@ -7,7 +7,7 @@
 		<button
 			on:click={() => {
 				keys.reset();
-			}}>Reset (Esc)</button
+			}}>Reset <span>Esc</span></button
 		>
 	{/if}
 </div>
@@ -15,8 +15,25 @@
 <style>
 	.resetBlock {
 		display: flex;
-		justify-content: center;
+		justify-content: end;
 		align-items: center;
-		margin-top: 20px;
+		height: 30px;
+		padding: 10px;
+	}
+
+	button {
+		display: flex;
+		gap: 10px;
+
+		padding: 10px 20px;
+		border: none;
+		border-radius: 20px;
+		background-color: var(--main-button-color);
+		color: var(--main-bg-color);
+		font-weight: 500;
+		cursor: pointer;
+	}
+	button span {
+		opacity: 0.5;
 	}
 </style>

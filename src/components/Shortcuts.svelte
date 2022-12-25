@@ -1,72 +1,109 @@
 <script lang="ts">
 	import { keys } from '$stores/keys';
-	import { getChromeShortcut } from '$utils/shortcutsHelpers';
+	import { getBrowserShortcut } from '$utils/shortcutsHelpers';
 	import ShortcutCards from './ShortcutCards.svelte';
 
-	let chromeMacShortcut: string | null = '';
-	let firefoxMacShortcut: string | null = '';
-	let safariMacShortcut: string | null = '';
-	let chromeWindowsShortcut: string | null = '';
-	let firefoxWindowsShortcut: string | null = '';
-
-	$: if ($keys?.length > 0) {
-		chromeMacShortcut = getChromeShortcut($keys, 'mac', 'chrome');
-		firefoxMacShortcut = getChromeShortcut($keys, 'mac', 'firefox');
-		safariMacShortcut = getChromeShortcut($keys, 'mac', 'safari');
-		chromeWindowsShortcut = getChromeShortcut($keys, 'windows', 'chrome');
-		firefoxWindowsShortcut = getChromeShortcut($keys, 'windows', 'firefox');
-	}
+	$: chromeMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'chrome') : [];
+	$: firefoxMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'firefox') : [];
+	$: safariMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'safari') : [];
+	$: chromeWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'chrome') : [];
+	$: firefoxWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'firefox') : [];
+	$: numberShortcuts =
+		chromeMacShortcuts.length +
+		firefoxMacShortcuts.length +
+		safariMacShortcuts.length +
+		chromeWindowsShortcuts.length +
+		firefoxWindowsShortcuts.length;
 </script>
 
-<div class="cardsGrid">
-	{#if chromeMacShortcut && $keys.length > 0}
-		<ShortcutCards browser="chrome" os="mac" title={chromeMacShortcut} />
+<div class="messageBlock">
+	{#if numberShortcuts === 0 && $keys.length > 1}
+		<div class="message">
+			<p>This shortcut isn't registered as a default browser shortcut.</p>
+			<p>According to our database.</p>
+		</div>
 	{/if}
-	{#if firefoxMacShortcut && $keys.length > 0}
-		<ShortcutCards browser="firefox" os="mac" title={firefoxMacShortcut} />
+	{#if numberShortcuts > 3}
+		<div class="message">
+			<p>Found {numberShortcuts} shortcuts.</p>
+		</div>
 	{/if}
-	{#if safariMacShortcut && $keys.length > 0}
-		<ShortcutCards browser="safari" os="mac" title={safariMacShortcut} />
+</div>
+{#if numberShortcuts > 0}
+	<div class="divider" />
+{/if}
+<div class={`cardsGrid ${numberShortcuts > 0 ? 'show' : ''}`}>
+	{#if chromeMacShortcuts.length > 0}
+		{#each chromeMacShortcuts as shortcut}
+			<ShortcutCards
+				browser="chrome"
+				os="mac"
+				title={shortcut.action}
+				shortcut={shortcut.shortcut}
+			/>
+		{/each}
 	{/if}
-	{#if chromeWindowsShortcut && $keys.length > 0}
-		<ShortcutCards browser="chrome" os="windows" title={chromeWindowsShortcut} />
+	{#if firefoxMacShortcuts.length > 0}
+		{#each firefoxMacShortcuts as shortcut}
+			<ShortcutCards
+				browser="firefox"
+				os="mac"
+				title={shortcut.action}
+				shortcut={shortcut.shortcut}
+			/>
+		{/each}
 	{/if}
-	{#if firefoxWindowsShortcut && $keys.length > 0}
-		<ShortcutCards browser="firefox" os="windows" title={firefoxWindowsShortcut} />
+	{#if safariMacShortcuts.length > 0}
+		{#each safariMacShortcuts as shortcut}
+			<ShortcutCards
+				browser="safari"
+				os="mac"
+				title={shortcut.action}
+				shortcut={shortcut.shortcut}
+			/>
+		{/each}
+	{/if}
+	{#if chromeWindowsShortcuts.length > 0}
+		{#each chromeWindowsShortcuts as shortcut}
+			<ShortcutCards
+				browser="chrome"
+				os="windows"
+				title={shortcut.action}
+				shortcut={shortcut.shortcut}
+			/>
+		{/each}
+	{/if}
+	{#if firefoxWindowsShortcuts.length > 0}
+		{#each firefoxWindowsShortcuts as shortcut}
+			<ShortcutCards
+				browser="firefox"
+				os="windows"
+				title={shortcut.action}
+				shortcut={shortcut.shortcut}
+			/>
+		{/each}
 	{/if}
 </div>
 
-<!-- <div class="browser">
-	Chrome
-	<div>
-		Mac: {chromeMacShortcut}
-	</div>
-	<div>
-		Windows: {chromeWindowsShortcut}
-	</div>
-</div>
-
-<div class="browser">
-	Firefox
-	<div>
-		Mac: {firefoxMacShortcut}
-	</div>
-	<div>
-		Windows: {firefoxWindowsShortcut}
-	</div>
-</div>
-
-<div class="browser">
-	Safari
-	<div>
-		Mac: {safariMacShortcut}
-	</div>
-</div> -->
 <style>
 	.cardsGrid {
+		display: none;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+	.show {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 1em;
-		padding: 10px;
+	}
+	.divider {
+		border-top: 0.5px solid;
+		opacity: 0.5;
+	}
+	.messageBlock {
+		padding: 20px;
+		height: 40px;
+		width: 100vw;
+	}
+
+	.message {
+		text-align: center;
 	}
 </style>

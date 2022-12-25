@@ -11,10 +11,10 @@
 	</span>
 	<div class="data">
 		<span class="row">
-			<span class="rowkey">e.code:</span><span class="rowvalue">{key.code}</span>
+			<span class="rowkey">.code:</span><span class="rowvalue">{key.code}</span>
 		</span>
 		<span class="row">
-			<span class="rowkey">e.key:</span><span class="rowvalue">{key.key}</span>
+			<span class="rowkey">.key:</span><span class="rowvalue">{key.key}</span>
 		</span>
 	</div>
 	<div class="code" />
@@ -27,19 +27,17 @@
 		justify-content: space-between;
 
 		max-width: 100%;
-		min-width: 50px;
+		min-width: 2em;
 
 		padding: 0.2em 0.5em;
 
-		border: 1px solid;
-		border-radius: 4px;
+		border: 2px solid;
+		border-radius: 5px;
 
 		font-family: inherit;
-		font-size: 16px;
-		color: #555;
 	}
 	kbd .label {
-		font-size: 48px;
+		font-size: 3em;
 		line-height: 36px;
 		min-height: 60px;
 		text-transform: capitalize;

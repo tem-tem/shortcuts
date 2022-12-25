@@ -1,18 +1,20 @@
 <script lang="ts">
+	// eslint-disable-next-line
 	export let browser: Browser;
+	// eslint-disable-next-line
 	export let os: OS;
 	export let title: string;
+	export let shortcut: string;
 </script>
 
 <div class="actionCard">
 	<div class="metadata">
-		<div class="browser">
-			<!-- <img src={`${browser}.svg`} alt={browser}/> -->
-			<span>{browser}</span>
+		<div class="platform">
+			<span class="browser">{browser}</span>
+			<span class="os">{os}</span>
 		</div>
-		<div class="os">
-			<!-- <img src={`${os}.svg`} alt={os}/> -->
-			<span>{os}</span>
+		<div class="shortcut">
+			<span>{shortcut}</span>
 		</div>
 	</div>
 	<div class="title">
@@ -22,12 +24,13 @@
 
 <style>
 	.actionCard {
-		border: 1px solid;
-		border-radius: 5px;
-		min-height: 150px;
+		border-bottom: 0.5px solid;
+		border-right: 0.5px solid;
+		min-height: 200px;
 		display: flex;
 		flex-direction: column;
-		padding: 10px;
+		justify-content: space-between;
+		padding: 1em;
 	}
 	.actionCard .metadata {
 		display: flex;
@@ -36,18 +39,25 @@
 		text-transform: capitalize;
 	}
 	.actionCard .title {
-		font-size: 32px;
+		font-size: 2em;
 		padding-top: 10px;
+		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	.platform {
+		display: flex;
+		justify-content: space-between;
 	}
 	.browser {
-		font-size: 18px;
 		font-weight: 700;
 		line-height: 10px;
 	}
 	.os {
-		font-size: 16px;
 		font-weight: 400;
+		font-size: 1em;
 		line-height: 10px;
-		color: #222;
+		opacity: 0.5;
+	}
+	.shortcut {
+		opacity: 0.75;
 	}
 </style>

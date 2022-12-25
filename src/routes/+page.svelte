@@ -18,8 +18,8 @@
 	});
 </script>
 
+<Reset />
 <Guide />
 <Keys />
-<Reset />
 <Shortcuts />
 <KeyListener />

@@ -1,20 +1,16 @@
-import { findByKey, getBrowserShortcutsJSON, getKeyList } from './helpers';
+import { getBrowserShortcutsJSON, getKeyList } from './helpers';
 
-export const getChromeShortcut = (keys: KeyboardEvent[], os: OS, browser: Browser) => {
+export const getBrowserShortcut = (keys: KeyboardEvent[], os: OS, browser: Browser) => {
 	const keyList = getKeyList(keys);
 	const targetBrowser = getBrowserShortcutsJSON(browser, os);
-
-	if (keyList.length === 1) {
-		return findByKey(targetBrowser, keyList[0]);
-	}
 
 	const matches = findKeyListMatches(keyList, targetBrowser);
 	const filteredMatches = filterMatchesAgainstInactiveActionButtons(matches, keyList);
 
-	if (filteredMatches.length === 0) return null;
-	if (filteredMatches.length === 1) return targetBrowser[filteredMatches[0]];
-	console.error('Multiple matches found for key list', keyList, filteredMatches);
-	return null;
+	if (filteredMatches.length === 0) return [];
+	return filteredMatches.map((m) => {
+		return { action: targetBrowser[m], shortcut: m };
+	});
 };
 
 function filterMatchesAgainstInactiveActionButtons(matches: string[], keyList: string[]) {
@@ -32,10 +28,19 @@ function filterMatchesAgainstInactiveActionButtons(matches: string[], keyList: s
 }
 
 function findKeyListMatches(keyList: string[], targetBrowser: ShortcutsJSON) {
-	const keyListRegex = keyList.map((k) => `(?=.*(${getKeyRegex(k)}))`).join('');
+	const keyListRegex = getKeyListRegex(keyList);
 	const re = new RegExp(`${keyListRegex}.+`, 'i');
 	const matches = Object.keys(targetBrowser).filter((k) => k.match(re));
 	return matches;
+}
+
+function getKeyListRegex(keyList: string[]) {
+	if (keyList.length === 1) {
+		const regex = getKeyRegex(keyList[0]);
+		return `(?=.*(^(${regex})&))`;
+	} else {
+		return keyList.map((k) => `(?=.*(${getKeyRegex(k)}))`).join('');
+	}
 }
 
 function getKeyRegex(key: string) {
@@ -48,11 +53,13 @@ function getKeyRegex(key: string) {
 			return 'ctrl|control';
 		case 'alt':
 			return 'alt|option';
+		case ' ':
+			return `space|spacebar|space bar`;
 		default:
-			// @ts-ignore
+			// eslint-disable-next-line
 			if (key.match(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/)) {
 				key = `\\${key}`;
 			}
-			return `(\\s|^)${key}(\\s|\\W|$)`;
+			return `(\\s|\\W|^|"|')${key}(\\s|\\W|$|"|')`;
 	}
 }

@@ -7,8 +7,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 5em;
+		margin-top: 2em;
 		margin-bottom: 1em;
-		height: 40px;
+		height: 2em;
+		font-weight: 700;
+		font-size: 1.5em;
 	}
 </style>
