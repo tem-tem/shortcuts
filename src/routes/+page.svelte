@@ -22,6 +22,7 @@
 </script>
 
 <main>
+	<h1>Shortcuts</h1>
 	<div class="header">
 		<Switcher />
 		<Reset />
@@ -32,9 +33,23 @@
 	<Shortcuts />
 	<KeyListener />
 </main>
+<footer>
+	<div>2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and <a href="https://github.com/Sergushka">Aleksander</a></div>
+	<div>Tech stack: SvelteKit, Typescript, Python for scrapping.</div>
+</footer>
 
 <style>
+	h1 {
+		font-size: 3rem;
+	}
 	main {
+		max-width: 800px;
+		margin: 0 auto;
+    	min-height: calc(100vh - 140px);
+	}
+	footer {
+		padding: 40px 0;
+		text-align: center;
 		max-width: 800px;
 		margin: 0 auto;
 	}
