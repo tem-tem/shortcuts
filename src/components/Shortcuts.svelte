@@ -89,6 +89,7 @@
 	.cardsGrid {
 		display: none;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		border-left: 0.5px solid;
 	}
 	.show {
 		display: grid;
@@ -100,7 +101,7 @@
 	.messageBlock {
 		padding: 20px;
 		height: 40px;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.message {

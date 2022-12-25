@@ -39,7 +39,7 @@
 		text-transform: capitalize;
 	}
 	.actionCard .title {
-		font-size: 2em;
+		font-size: 1.5em;
 		padding-top: 10px;
 		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}

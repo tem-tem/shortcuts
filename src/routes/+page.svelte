@@ -7,6 +7,7 @@
 	import KeyListener from '$components/KeyListener.svelte';
 	import Guide from '$components/Guide.svelte';
 	import Switcher from '$components/Switcher.svelte';
+	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
 
 	onMount(() => {
 		os.set('mac');
@@ -20,16 +21,23 @@
 	});
 </script>
 
-<div class="header">
-	<Switcher />
-	<Reset />
-</div>
-<Guide />
-<Keys />
-<Shortcuts />
-<KeyListener />
+<main>
+	<div class="header">
+		<Switcher />
+		<Reset />
+	</div>
+	<Guide />
+	<Keys />
+	<KeyDataSwitcher />
+	<Shortcuts />
+	<KeyListener />
+</main>
 
 <style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+	}
 	.header {
 		display: flex;
 		justify-content: space-between;
