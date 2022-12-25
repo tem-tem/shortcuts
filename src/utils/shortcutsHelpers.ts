@@ -38,8 +38,6 @@ function findKeyListMatches(keyList: string[], targetBrowser: ShortcutsJSON) {
 	return matches;
 }
 
-// const SEPARATOR = '.?(\\+|\\-|and|\\W|\\s).?';
-
 function getKeyRegex(key: string) {
 	switch (key) {
 		case 'meta':
@@ -51,32 +49,10 @@ function getKeyRegex(key: string) {
 		case 'alt':
 			return 'alt|option';
 		default:
+			// @ts-ignore
 			if (key.match(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/)) {
 				key = `\\${key}`;
 			}
 			return `(\\s|^)${key}(\\s|\\W|$)`;
 	}
 }
-
-// switch (k.key) {
-//     case 'Meta':
-//         return '⌘';
-//     case 'Shift':
-//         return 'Shift';
-//     case 'Control':
-//         return 'Ctrl';
-//     case 'Alt':
-//         return 'Option';
-//     case 'Escape':
-//         return 'Esc';
-//     case 'PageUp':
-//         return 'PgUp';
-//     case 'PageDown':
-//         return 'PgDn';
-//     case 'ArrowUp':
-//         return 'Up arrow';
-//     case 'ArrowDown':
-//         return 'Down arrow';
-//     default:
-//         return k.key;
-// }

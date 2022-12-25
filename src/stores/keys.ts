@@ -16,7 +16,8 @@ const createKeysStore = () => {
 		update,
 		add,
 		remove: (key: KeyboardEvent) => update((keys) => keys.filter((k) => k !== key)),
-		reset: () => set([])
+		reset: () => set([]),
+		removeLast: () => update((keys) => keys.slice(0, -1))
 	};
 };
 

@@ -64,6 +64,8 @@ const getDisplaySymbolMac = (key: KeyboardEvent) => {
 			return '⌃';
 		case 'Alt':
 			return '⌥';
+		case ' ':
+			return 'Space';
 		default:
 			return key.key.toLocaleLowerCase();
 	}
@@ -79,6 +81,8 @@ const getDisplaySymbolWindows = (key: KeyboardEvent) => {
 			return 'Ctrl';
 		case 'Alt':
 			return 'Alt';
+		case ' ':
+			return 'Space';
 		default:
 			return key.key.toLocaleLowerCase();
 	}

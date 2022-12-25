@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Keys from '$components/Keys.svelte';
 	import Shortcuts from '$components/Shortcuts.svelte';
-	import { keys } from '$stores/keys';
 	import { os } from '$stores/ui';
 	import { onMount } from 'svelte';
+	import Reset from '$components/Reset.svelte';
+	import KeyListener from '$components/KeyListener.svelte';
+	import Guide from '$components/Guide.svelte';
 
 	onMount(() => {
 		const { userAgent } = navigator;
@@ -16,27 +18,8 @@
 	});
 </script>
 
-<div class="header">
-	<pre>Hit keys one by one to test a shortcut</pre>
-	{#if $keys.length > 0}
-		<pre>
-            <button
-				on:click={() => {
-					keys.reset();
-				}}>Reset (ESC)</button
-			>
-        </pre>
-	{/if}
-</div>
+<Guide />
 <Keys />
+<Reset />
 <Shortcuts />
-
-<style>
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1em;
-		height: 40px;
-	}
-</style>
+<KeyListener />
