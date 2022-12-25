@@ -33,8 +33,8 @@
 		flex-direction: column;
 		justify-content: space-between;
 
-		max-width: 100%;
-		min-width: 2em;
+		min-width: 3em;
+		min-height: 3em;
 
 		padding: 0.2em 0.5em;
 
@@ -50,6 +50,7 @@
 	}
 
 	.data {
+		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
 	}
