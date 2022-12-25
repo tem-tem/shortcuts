@@ -37,7 +37,7 @@ function findKeyListMatches(keyList: string[], targetBrowser: ShortcutsJSON) {
 function getKeyListRegex(keyList: string[]) {
 	if (keyList.length === 1) {
 		const regex = getKeyRegex(keyList[0]);
-		return `(?=.*(^(${regex})&))`;
+		return `(?=.*(^(${regex})$))`;
 	} else {
 		return keyList.map((k) => `(?=.*(${getKeyRegex(k)}))`).join('');
 	}

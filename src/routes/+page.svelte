@@ -6,8 +6,10 @@
 	import Reset from '$components/Reset.svelte';
 	import KeyListener from '$components/KeyListener.svelte';
 	import Guide from '$components/Guide.svelte';
+	import Switcher from '$components/Switcher.svelte';
 
 	onMount(() => {
+		os.set('mac');
 		const { userAgent } = navigator;
 		if (userAgent.includes('Mac')) {
 			os.set('mac');
@@ -18,8 +20,21 @@
 	});
 </script>
 
-<Reset />
+<div class="header">
+	<Switcher />
+	<Reset />
+</div>
 <Guide />
 <Keys />
 <Shortcuts />
 <KeyListener />
+
+<style>
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 30px;
+		padding: 10px;
+	}
+</style>

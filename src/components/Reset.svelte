@@ -2,25 +2,15 @@
 	import { keys } from '$stores/keys';
 </script>
 
-<div class="resetBlock">
-	{#if $keys.length > 0}
-		<button
-			on:click={() => {
-				keys.reset();
-			}}>Reset <span>Esc</span></button
-		>
-	{/if}
-</div>
+{#if $keys.length > 0}
+	<button
+		on:click={() => {
+			keys.reset();
+		}}>Reset <span>Esc</span></button
+	>
+{/if}
 
 <style>
-	.resetBlock {
-		display: flex;
-		justify-content: end;
-		align-items: center;
-		height: 30px;
-		padding: 10px;
-	}
-
 	button {
 		display: flex;
 		gap: 10px;
