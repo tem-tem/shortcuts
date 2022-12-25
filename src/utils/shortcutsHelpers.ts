@@ -51,6 +51,9 @@ function getKeyRegex(key: string) {
 		case 'alt':
 			return 'alt|option';
 		default:
+			if (key.match(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/)) {
+				key = `\\${key}`;
+			}
 			return `(\\s|^)${key}(\\s|\\W|$)`;
 	}
 }
