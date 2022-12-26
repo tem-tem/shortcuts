@@ -20,13 +20,15 @@
 <main>
 	<Tooltip />
 	<Theme />
-	<div class="header super">
-		<h1>Default Shortcuts</h1>
+	<div class="header">
+		<div class="about">
+			<b>Default Shortcuts</b> is a tool for searching keyboard shortcuts across browsers.<br />
+		</div>
 		<Switcher />
 	</div>
-	<Guide />
-	<div class="header">
-		<div />
+	<div class="guide">
+		<Guide />
+		<!-- <div /> -->
 		<Reset />
 	</div>
 	{#if $keys.length > 0}
@@ -40,26 +42,19 @@
 </main>
 <footer>
 	<div class="about">
-		Default Shortcuts allows you to search for keyboard shortcuts across popular browsers such as
-		Chrome, Firefox, and Safari on both Windows and Mac operating systems. Note that this app
-		requires a keyboard and cannot be used on mobile devices.
+		Browsers: Chrome, Firefox, and Safari.<br />
+		OS: Windows and Mac.<br />
+		v.0.2.1<br />
+		<br />
+		Tech stack: SvelteKit, Typescript + Python for scraping.<br />
 	</div>
 	<div class="team">
-		<div>
-			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
-			<a href="https://github.com/Sergushka">Aleksander</a>
-		</div>
-		<p>Tech stack: SvelteKit, Typescript<br>+ Python for scraping.</p>
+		2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
+		<a href="https://github.com/Sergushka">Aleksander</a>
 	</div>
 </footer>
 
 <style>
-	.super {
-		margin-top: 40px;
-	}
-	h1 {
-		font-size: 3rem;
-	}
 	main {
 		max-width: 800px;
 		margin: 0 auto;
@@ -73,7 +68,7 @@
 
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: flex-end;
 		gap: 2rem;
 	}
 	.about {
@@ -81,12 +76,18 @@
 		text-align: left;
 	}
 	.team {
-		text-align: right;
+		text-align: left;
 	}
 	.header {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
+		/* height: 30px; */
+	}
+	.guide {
+		/* margin: 40px 0; */
+		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		height: 30px;
 	}
 </style>

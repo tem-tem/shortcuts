@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 2em;
+		margin-top: 1em;
 		margin-bottom: 1em;
 		height: 2em;
 		font-weight: 700;
