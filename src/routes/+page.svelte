@@ -10,6 +10,7 @@
 	import { keys } from '$stores/keys';
 	import DemoKeys from '$components/DemoKeys.svelte';
 	import Theme from '$components/Theme.svelte';
+	import Tooltip from '$components/Tooltip.svelte';
 
 	onMount(() => {
 		window.focus();
@@ -17,6 +18,7 @@
 </script>
 
 <main>
+	<Tooltip />
 	<Theme />
 	<div class="header super">
 		<h1>Default Shortcuts</h1>
@@ -37,11 +39,18 @@
 	<KeyListener />
 </main>
 <footer>
-	<div>
-		2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
-		<a href="https://github.com/Sergushka">Aleksander</a>
+	<div class="about">
+		Default Shortcuts allows you to search for keyboard shortcuts across popular browsers such as
+		Chrome, Firefox, and Safari on both Windows and Mac operating systems. Note that this app
+		requires a keyboard and cannot be used on mobile devices.
 	</div>
-	<div>Tech stack: SvelteKit, Typescript + Python for scraping.</div>
+	<div class="team">
+		<div>
+			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
+			<a href="https://github.com/Sergushka">Aleksander</a>
+		</div>
+		<p>Tech stack: SvelteKit, Typescript + Python for scraping.</p>
+	</div>
 </footer>
 
 <style>
@@ -54,19 +63,30 @@
 	main {
 		max-width: 800px;
 		margin: 0 auto;
-		min-height: calc(100vh - 140px);
+		min-height: calc(100vh - 170px);
 	}
 	footer {
 		padding: 40px 0;
 		text-align: center;
 		max-width: 800px;
 		margin: 0 auto;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+	.about {
+		max-width: 50%;
+		text-align: left;
+	}
+	.team {
+		text-align: right;
 	}
 	.header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 30px;
-		padding: 10px;
 	}
 </style>

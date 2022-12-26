@@ -14,3 +14,5 @@ theme.subscribe((value) => {
 		localStorage.setItem('defaultTheme', JSON.stringify(value));
 	}
 });
+
+export const tooltipMessage = writable<string | null>(null);
