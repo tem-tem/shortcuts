@@ -49,7 +49,7 @@
 			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
 			<a href="https://github.com/Sergushka">Aleksander</a>
 		</div>
-		<p>Tech stack: SvelteKit, Typescript + Python for scraping.</p>
+		<p>Tech stack: SvelteKit, Typescript<br>+ Python for scraping.</p>
 	</div>
 </footer>
 
