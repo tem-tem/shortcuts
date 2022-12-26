@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { blur } from "svelte/transition";
+	import type { Browser, OS } from "$types/global";
 
 
-	// eslint-disable-next-line
 	export let browser: Browser;
-	// eslint-disable-next-line
 	export let os: OS;
 	export let title: string;
 	export let shortcut: string;

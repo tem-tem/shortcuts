@@ -3,6 +3,7 @@ import chromeWin from '$data/chromeWin.json';
 import firefoxMac from '$data/firefoxMac.json';
 import firefoxWin from '$data/firefoxWin.json';
 import safari from '$data/safari.json';
+import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types/global';
 
 export const reorderKeys = (keys: KeyboardEvent[]) => {
 	let metaKey: KeyboardEvent | undefined;
@@ -45,7 +46,7 @@ export const replaceKey = (key: KeyboardEvent, keys: KeyboardEvent[]) => {
 	return keys.map((k) => (k.key === key.key ? key : k));
 };
 
-export const getDisplaySymbol = (key: KeyboardEvent, os: 'windows' | 'mac') => {
+export const getDisplaySymbol = (key: KeyboardEvent | DemoKey, os: 'windows' | 'mac') => {
 	switch (os) {
 		case 'windows':
 			return getDisplaySymbolWindows(key);
@@ -54,7 +55,7 @@ export const getDisplaySymbol = (key: KeyboardEvent, os: 'windows' | 'mac') => {
 	}
 };
 
-const getDisplaySymbolMac = (key: KeyboardEvent) => {
+const getDisplaySymbolMac = (key: KeyboardEvent | DemoKey) => {
 	switch (key.key) {
 		case 'Meta':
 			return '⌘';
@@ -71,7 +72,7 @@ const getDisplaySymbolMac = (key: KeyboardEvent) => {
 	}
 };
 
-const getDisplaySymbolWindows = (key: KeyboardEvent) => {
+const getDisplaySymbolWindows = (key: KeyboardEvent | DemoKey) => {
 	switch (key.key) {
 		case 'Meta':
 			return 'Win';

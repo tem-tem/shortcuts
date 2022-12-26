@@ -1,4 +1,4 @@
-type OS = 'mac' | 'windows';
+export type OS = 'mac' | 'windows';
 
 type ShortcutsJSON = { [shortcut: string]: string };
 
@@ -7,4 +7,9 @@ declare module '*.json' {
 	export default value;
 }
 
-type Browser = 'chrome' | 'firefox' | 'safari';
+export type Browser = 'chrome' | 'firefox' | 'safari';
+
+type DemoKey = {
+	code: string;
+	key: string;
+}

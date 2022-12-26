@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { fullInfo, os } from '$stores/ui';
+	import type { DemoKey } from '$types/global';
 	import { getDisplaySymbol } from '$utils/helpers';
 	import { scale } from 'svelte/transition';
 
-	export let key: KeyboardEvent;
+	export let key: KeyboardEvent | DemoKey;
 
 	const copyData = (data: string) => () => {
 		navigator.clipboard.writeText(data);

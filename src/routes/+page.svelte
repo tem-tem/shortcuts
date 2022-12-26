@@ -8,6 +8,8 @@
 	import Guide from '$components/Guide.svelte';
 	import Switcher from '$components/Switcher.svelte';
 	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
+	import { keys } from '$stores/keys';
+	import DemoKeys from '$components/DemoKeys.svelte';
 
 	onMount(() => {
 		os.set('mac');
@@ -31,7 +33,11 @@
 		<div />
 		<Reset />
 	</div>
-	<Keys />
+	{#if $keys.length > 0}
+		<Keys />
+	{:else}
+		<DemoKeys />
+	{/if}
 	<KeyDataSwitcher />
 	<Shortcuts />
 	<KeyListener />
@@ -41,7 +47,7 @@
 		2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
 		<a href="https://github.com/Sergushka">Aleksander</a>
 	</div>
-	<div>Tech stack: SvelteKit, Typescript, Python for scrapping.</div>
+	<div>Tech stack: SvelteKit, Typescript + Python for scrapping.</div>
 </footer>
 
 <style>
