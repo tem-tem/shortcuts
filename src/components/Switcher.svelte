@@ -1,15 +1,27 @@
 <script>
 	import { os } from '$stores/ui';
+	import { onMount } from 'svelte';
 
 	let toggler = $os === 'mac';
-	$: if (toggler) {
-		os.set('mac');
-	} else {
-		os.set('windows');
-	}
 	const toggle = () => {
 		toggler = !toggler;
+		if (toggler) {
+			os.set('mac');
+		} else {
+			os.set('windows');
+		}
 	};
+
+	onMount(() => {
+		const { userAgent } = navigator;
+		if (userAgent.includes('Mac')) {
+			os.set('mac');
+			toggler = true;
+		} else {
+			os.set('windows');
+			toggler = false;
+		}
+	});
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->

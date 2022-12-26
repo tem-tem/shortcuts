@@ -2,7 +2,6 @@
 	import { keys } from '$stores/keys';
 
 	function handleKeydown(event: KeyboardEvent) {
-		event.preventDefault();
 		if (event.key === 'Escape') {
 			keys.reset();
 			return;

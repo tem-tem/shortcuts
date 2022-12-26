@@ -7,7 +7,7 @@ export const os = writable<'windows' | 'mac'>('mac');
 export const fullInfo = writable<boolean>(true);
 
 const savedTheme = browser && JSON.parse(localStorage.getItem('defaultTheme') as string);
-export const theme = writable<ThemeColors>(savedTheme || themes.dark);
+export const theme = writable<ThemeColors>(savedTheme || themes.pink);
 
 theme.subscribe((value) => {
 	if (browser) {
