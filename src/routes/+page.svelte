@@ -63,7 +63,7 @@
 	main {
 		max-width: 800px;
 		margin: 0 auto;
-		min-height: calc(100vh - 170px);
+		min-height: calc(100vh - 180px);
 	}
 	footer {
 		padding: 40px 0;
