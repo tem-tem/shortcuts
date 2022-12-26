@@ -46,7 +46,9 @@
 		OS: Windows and Mac.<br />
 		v.0.2.1<br />
 		<br />
-		Tech stack: SvelteKit, Typescript + Python for scraping.<br />
+		<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
+			>Share on twitter</a
+		>
 	</div>
 	<div class="team">
 		2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
@@ -58,10 +60,10 @@
 	main {
 		max-width: 800px;
 		margin: 0 auto;
-		min-height: calc(100vh - 180px);
+		min-height: calc(100vh - 200px);
 	}
 	footer {
-		padding: 40px 0;
+		padding: 80px 0 30px;
 		text-align: center;
 		max-width: 800px;
 		margin: 0 auto;
