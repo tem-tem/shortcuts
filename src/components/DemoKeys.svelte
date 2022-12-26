@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { demoShortcuts } from '$data/demo';
+	import { demoShortcuts, demoShortcutsWindows } from '$data/demo';
+	import { os } from '$stores/ui';
 	import type { DemoKey } from '$types/global';
 	import { onMount } from 'svelte';
-	import { crossfade, fly, slide } from 'svelte/transition';
 	import Key from './Key.svelte';
 
     const singleKeyDelay = 500;
     const shortcutDelay = 3000;
 
 	let demoKeys: DemoKey[] = [];
+
+	$: shortcutList = $os === 'mac' ? demoShortcuts : demoShortcutsWindows;
 
 	const fillDemoKeysWithDelay = (keys: DemoKey[]) => {
         demoKeys = [];
@@ -20,14 +22,14 @@
 	};
 
 	const loopDemoShortcuts = () => {
-		demoShortcuts.map((shortcut, i) => {
+		shortcutList.map((shortcut, i) => {
 			setTimeout(() => {
 				fillDemoKeysWithDelay(shortcut);
 			}, i * shortcutDelay);
 		});
         setTimeout(() => {
             loopDemoShortcuts();
-        }, demoShortcuts.length * shortcutDelay);
+        }, shortcutList.length * shortcutDelay);
 	}
 
     onMount(() => {

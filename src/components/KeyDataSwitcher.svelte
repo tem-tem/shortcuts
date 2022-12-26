@@ -1,11 +1,12 @@
 <script>
 	import { keys } from '$stores/keys';
 	import { fullInfo } from '$stores/ui';
+	import { fade } from 'svelte/transition';
 </script>
 
 {#if $keys.length > 0}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="container" on:click={() => ($fullInfo = !$fullInfo)}>
+	<div class="container" on:click={() => ($fullInfo = !$fullInfo)} in:fade={{ duration: 200 }}>
 		<div class="label">Displaying {$fullInfo ? 'key data' : 'keys only'}</div>
 		<div class="info"><span>i</span></div>
 	</div>
@@ -21,6 +22,7 @@
 		padding: 10px;
 		margin-top: 10px;
 		margin-left: auto;
+		width: 200px;
 	}
 
 	.info {

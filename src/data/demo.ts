@@ -57,3 +57,44 @@
 				},
 			],
 		];
+
+		export const demoShortcutsWindows = [
+			[
+				{
+					key: 'Ctrl',
+					code: 'ControlLeft',
+				},
+				{
+					key: 'Shift',
+					code: 'ShiftLeft',
+				},
+				{
+					key: 'r',
+					code: 'KeyR',
+				},
+			],
+			[
+				{
+					key: 'Ctrl',
+					code: 'ControlLeft',
+				},
+				{
+					key: 'v',
+					code: 'KeyV',
+				},
+			],
+			[
+				{
+					key: 'Shift',
+					code: 'ShiftLeft',
+				},
+				{
+					key: 'Alt',
+					code: 'AltLeft',
+				},
+				{
+					key: 't',
+					code: 'KeyT',
+				},
+			],
+		];

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { keys } from '$stores/keys';
 	import { getBrowserShortcut } from '$utils/shortcutsHelpers';
+	import { fade } from 'svelte/transition';
 	import ShortcutCards from './ShortcutCards.svelte';
 
 	$: chromeMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'chrome') : [];
@@ -18,19 +19,19 @@
 
 <div class="messageBlock">
 	{#if numberShortcuts === 0 && $keys.length > 1}
-		<div class="message">
+		<div class="message" in:fade={{ duration: 200 }} >
 			<p>This shortcut isn't registered as a default browser shortcut.</p>
 			<p>According to our database.</p>
 		</div>
 	{/if}
 	{#if numberShortcuts > 3}
-		<div class="message">
+		<div class="message" in:fade={{ duration: 200 }}>
 			<p>Found {numberShortcuts} shortcuts.</p>
 		</div>
 	{/if}
 </div>
 {#if numberShortcuts > 0}
-	<div class="divider" />
+	<div class="divider" in:fade={{ duration: 200 }} />
 {/if}
 <div class={`cardsGrid ${numberShortcuts > 0 ? 'show' : ''}`}>
 	{#if chromeMacShortcuts.length > 0}
