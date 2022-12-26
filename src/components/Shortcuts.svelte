@@ -19,7 +19,7 @@
 
 <div class="messageBlock">
 	{#if numberShortcuts === 0 && $keys.length > 1}
-		<div class="message" in:fade={{ duration: 200 }} >
+		<div class="message" in:fade={{ duration: 200 }}>
 			<p>This shortcut isn't registered as a default browser shortcut.</p>
 			<p>According to our database.</p>
 		</div>

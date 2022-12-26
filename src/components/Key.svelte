@@ -11,7 +11,7 @@
 	};
 </script>
 
-<kbd in:scale={{duration: 200}}>
+<kbd in:scale={{ duration: 200 }}>
 	<span class="label">
 		{getDisplaySymbol(key, $os)}
 	</span>

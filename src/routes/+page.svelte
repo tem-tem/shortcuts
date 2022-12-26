@@ -10,6 +10,7 @@
 	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
 	import { keys } from '$stores/keys';
 	import DemoKeys from '$components/DemoKeys.svelte';
+	import Theme from '$components/Theme.svelte';
 
 	onMount(() => {
 		os.set('mac');
@@ -24,6 +25,7 @@
 </script>
 
 <main>
+	<Theme />
 	<div class="header super">
 		<h1>Default Shortcuts</h1>
 		<Switcher />

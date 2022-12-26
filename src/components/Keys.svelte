@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { keys } from '$stores/keys';
 	import Key from './Key.svelte';
-
 </script>
 
 <div class="keys">
