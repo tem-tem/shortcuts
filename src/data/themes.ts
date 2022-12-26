@@ -1,6 +1,6 @@
 import type { ThemeColors } from '$types/global';
 
-export const themes: { [key: string]: ThemeColors } = {
+export const themes: Record<string, ThemeColors> = {
 	light: {
 		bg: '#f4f7ff',
 		text: '#28293c',

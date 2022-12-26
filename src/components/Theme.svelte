@@ -3,6 +3,7 @@
 	import { themes } from '$data/themes';
 	import { theme } from '$stores/ui';
 	import type { ThemeColors } from '$types/global';
+	import { themeToCSSVariables } from '$utils/themeToCSSVariables';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -15,12 +16,12 @@
 
 	theme.subscribe((newTheme) => {
 		if (browser) {
-			const newColors = `
-                --main-bg-color: ${newTheme.bg};
-                --main-text-color: ${newTheme.text};
-                --main-button-color: ${newTheme.button};`;
-			const { body } = document;
-			body.setAttribute('style', newColors);
+			const newColors = themeToCSSVariables(newTheme);
+
+			const root = document.querySelector(':root');
+			if (root) {
+				root.setAttribute('style', newColors);
+			}
 		}
 	});
 </script>
@@ -42,7 +43,6 @@
 	.container {
 		display: flex;
 		align-items: start;
-		justify-content: start;
 		gap: 1rem;
 		height: 2rem;
 	}
