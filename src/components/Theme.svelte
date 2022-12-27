@@ -1,39 +1,52 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { themes } from '$data/themes';
-	import { theme } from '$stores/ui';
-	import type { ThemeColors } from '$types/global';
+	import { theme } from '$stores/theme';
+	import type { ThemeName } from '$types';
 	import { themeToCSSVariables } from '$utils/themeToCSSVariables';
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		theme.set(JSON.parse(localStorage.getItem('defaultTheme') as string));
-	});
+	let localThemeName: ThemeName;
 
-	const setTheme = (newTheme: ThemeColors) => {
-		theme.set(newTheme);
-	};
-
-	theme.subscribe((newTheme) => {
+	const injectCSSVars = (theme: ThemeName) => {
 		if (browser) {
-			const newColors = themeToCSSVariables(newTheme);
+			const newColors = themeToCSSVariables(theme);
 
 			const root = document.querySelector(':root');
 			if (root) {
 				root.setAttribute('style', newColors);
 			}
 		}
+	};
+
+	onMount(() => {
+		const savedTheme =
+			browser && JSON.parse(JSON.stringify(localStorage.getItem('defaultTheme')) ?? '');
+		theme.set(savedTheme ?? 'pink');
 	});
+
+	const setTheme = (newTheme: ThemeName) => {
+		theme.set(newTheme);
+	};
+
+	theme.subscribe((newTheme) => {
+		if (newTheme) {
+			localThemeName = newTheme;
+			injectCSSVars(newTheme);
+		}
+	});
+
+	const themeNameTypes = Object.keys(themes) as ThemeName[];
 </script>
 
 <div class="container">
 	<div class="themeIcons">
-		{#each Object.keys(themes) as themeName}
+		{#each themeNameTypes as themeName}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class={`themeIcon ${themes[themeName].button === $theme.button ? 'active' : ''}`}
+				class={`themeIcon ${themeName === localThemeName ? 'active' : ''}`}
 				style={`background: ${themes[themeName].bg}`}
-				on:click={() => setTheme(themes[themeName])}
+				on:click={() => setTheme(themeName)}
 			/>
 		{/each}
 	</div>

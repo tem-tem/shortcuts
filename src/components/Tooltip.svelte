@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { tooltipMessage } from '$stores/ui';
+	import { tooltipMessage } from '$stores/tooltip';
 	import { onMount } from 'svelte';
 	import { fade, blur } from 'svelte/transition';
 

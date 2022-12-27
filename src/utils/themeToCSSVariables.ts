@@ -1,16 +1,17 @@
-import type { ThemeColors } from '$types/global';
+import type { CSSVarName, CSSVariables, ThemeColors, ThemeName } from '$types';
+import { themes } from '$data/themes';
 
-export const themeToCSSVariables = (theme: ThemeColors) => {
-	// replace keys with CSS vars format
-	Object.keys(theme).forEach((color) => {
-		// @ts-expect-error TODO: types
-		delete Object.assign(theme, { [`--main-${color}-color`]: theme[color] })[color];
-		return theme;
-	});
+export const themeToCSSVariables = (themeName: ThemeName): string => {
+	const themeColors = themes[themeName];
 
-	const colors = Object.keys(theme);
-	return colors.reduce((prev, curr) => {
-		// @ts-expect-error TODO: types
-		return prev.concat(`${curr}: ${theme[curr]};\n`);
-	}, '');
+	// keys to css vars
+	const colorKeys = Object.keys(themeColors) as [keyof ThemeColors];
+	const cssVars = colorKeys.reduce((prev, color) => {
+		prev[`--main-${color}-color`] = themeColors[color];
+		return prev;
+	}, {} as CSSVariables);
+
+	// construct CSS-injectable string
+	const cssVarsKeys = Object.keys(cssVars) as CSSVarName[];
+	return cssVarsKeys.reduce((prev, curr) => prev.concat(`${curr}:${cssVars[curr]};\n`), '');
 };

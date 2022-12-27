@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Browser, OS } from '$types/global';
+	import type { Browser, OS } from '$types';
 
 	export let browser: Browser;
 	export let os: OS;
