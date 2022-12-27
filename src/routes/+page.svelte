@@ -29,7 +29,6 @@
 		</div>
 		<div class="guide">
 			<Guide />
-			<!-- <div /> -->
 			<Reset />
 		</div>
 		{#if $keys.length > 0}
@@ -73,7 +72,7 @@
 		padding: 80px 0 30px;
 		max-width: 800px;
 		margin: 0 auto;
-
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
