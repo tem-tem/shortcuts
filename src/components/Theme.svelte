@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { LS_KEYS } from '$constants';
 	import { themes } from '$data/themes';
-	import { theme } from '$stores/theme';
+	import { themeName } from '$stores/theme';
 	import type { ThemeName } from '$types';
 	import { themeToCSSVariables } from '$utils/themeToCSSVariables';
 	import { onMount } from 'svelte';
 
-	let localThemeName: ThemeName;
+	let scopedThemeName: ThemeName;
 
 	const injectCSSVars = (theme: ThemeName) => {
 		if (browser) {
@@ -20,33 +21,32 @@
 	};
 
 	onMount(() => {
-		const savedTheme =
-			browser && JSON.parse(JSON.stringify(localStorage.getItem('defaultTheme')) ?? '');
-		theme.set(savedTheme ?? 'pink');
+		const savedThemeName = browser && (localStorage.getItem(LS_KEYS.themeName) as ThemeName);
+		themeName.set(savedThemeName || 'pink');
 	});
 
-	const setTheme = (newTheme: ThemeName) => {
-		theme.set(newTheme);
+	const setThemeName = (newTheme: ThemeName) => {
+		themeName.set(newTheme);
 	};
 
-	theme.subscribe((newTheme) => {
+	themeName.subscribe((newTheme) => {
 		if (newTheme) {
-			localThemeName = newTheme;
+			scopedThemeName = newTheme;
 			injectCSSVars(newTheme);
 		}
 	});
 
-	const themeNameTypes = Object.keys(themes) as ThemeName[];
+	const themeNames = Object.keys(themes) as ThemeName[];
 </script>
 
 <div class="container">
 	<div class="themeIcons">
-		{#each themeNameTypes as themeName}
+		{#each themeNames as themeName}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class={`themeIcon ${themeName === localThemeName ? 'active' : ''}`}
+				class={`themeIcon ${themeName === scopedThemeName ? 'active' : ''}`}
 				style={`background: ${themes[themeName].bg}`}
-				on:click={() => setTheme(themeName)}
+				on:click={() => setThemeName(themeName)}
 			/>
 		{/each}
 	</div>
@@ -55,8 +55,7 @@
 <style>
 	.container {
 		display: flex;
-		align-items: start;
-		gap: 1rem;
+		width: fit-content;
 		height: 2rem;
 	}
 

@@ -1,11 +1,12 @@
 import { browser } from '$app/environment';
+import { LS_KEYS } from '$constants';
 import type { ThemeName } from '$types';
 import { writable } from 'svelte/store';
 
-export const theme = writable<ThemeName | null>(null);
+export const themeName = writable<ThemeName | null>(null);
 
-theme.subscribe((value) => {
+themeName.subscribe((value) => {
 	if (browser && value) {
-		localStorage.setItem('defaultTheme', value);
+		localStorage.setItem(LS_KEYS.themeName, value);
 	}
 });
