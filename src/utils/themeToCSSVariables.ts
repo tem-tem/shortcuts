@@ -4,14 +4,20 @@ import { themes } from '$data/themes';
 export const themeToCSSVariables = (themeName: ThemeName): string => {
 	const themeColors = themes[themeName];
 
-	// keys to css vars
-	const colorKeys = Object.keys(themeColors) as [keyof ThemeColors];
+	const cssVars = getCSSVarsFromThemeColors(themeColors)
+	return constructCSSVarsString(cssVars);
+};
+
+const getCSSVarsFromThemeColors = (colors: ThemeColors): CSSVariables => {
+	const colorKeys = Object.keys(colors) as [keyof ThemeColors];
 	const cssVars = colorKeys.reduce((prev, color) => {
-		prev[`--main-${color}-color`] = themeColors[color];
+		prev[`--main-${color}-color`] = colors[color];
 		return prev;
 	}, {} as CSSVariables);
+	return cssVars;
+};
 
-	// construct CSS-injectable string
+const constructCSSVarsString = (cssVars: CSSVariables): string => {
 	const cssVarsKeys = Object.keys(cssVars) as CSSVarName[];
 	return cssVarsKeys.reduce((prev, curr) => prev.concat(`${curr}:${cssVars[curr]};\n`), '');
 };
