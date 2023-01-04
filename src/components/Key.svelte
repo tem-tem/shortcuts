@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { fullInfo, os, tooltipMessage } from '$stores/ui';
-	import type { DemoKey } from '$types/global';
+	import { fullInfo, os } from '$stores/ui';
+	import { tooltipMessage } from '$stores/tooltip';
+	import type { DemoKey } from '$types';
 	import { getDisplaySymbol } from '$utils/helpers';
 	import { scale } from 'svelte/transition';
 
@@ -20,11 +21,11 @@
 		<div class="data">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.code)}>
-				<span class="rowkey">.code:</span><span class="rowvalue">{key.code}</span>
+				<span>.code:</span><span class="rowValue">{key.code}</span>
 			</span>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.key)}>
-				<span class="rowkey">.key:</span><span class="rowvalue">{key.key}</span>
+				<span>.key:</span><span class="rowValue">{key.key}</span>
 			</span>
 		</div>
 	{/if}
@@ -43,8 +44,6 @@
 
 		border: 2px solid;
 		border-radius: 5px;
-
-		font-family: inherit;
 	}
 	kbd .label {
 		font-size: 3em;
@@ -64,13 +63,13 @@
 		gap: 5px;
 	}
 
-	.rowvalue {
+	.rowValue {
 		font-weight: 700;
 	}
 	.row {
 		cursor: pointer;
 	}
-	.row:hover .rowvalue {
+	.row:hover .rowValue {
 		text-decoration: underline;
 	}
 </style>

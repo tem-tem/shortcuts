@@ -1,38 +1,52 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { LS_KEYS } from '$constants';
 	import { themes } from '$data/themes';
-	import { theme } from '$stores/ui';
-	import type { ThemeColors } from '$types/global';
+	import { themeName } from '$stores/theme';
+	import type { ThemeName } from '$types';
+	import { themeToCSSVariables } from '$utils/themeToCSSVariables';
 	import { onMount } from 'svelte';
 
-	onMount(() => {
-		theme.set(JSON.parse(localStorage.getItem('defaultTheme') as string));
-	});
+	let scopedThemeName: ThemeName;
 
-	const setTheme = (newTheme: ThemeColors) => {
-		theme.set(newTheme);
+	const injectCSSVars = (theme: ThemeName) => {
+		if (browser) {
+			const newColors = themeToCSSVariables(theme);
+
+			const root = document.querySelector(':root');
+			if (root) {
+				root.setAttribute('style', newColors);
+			}
+		}
 	};
 
-	theme.subscribe((newTheme) => {
-		if (browser) {
-			const newColors = `
-                --main-bg-color: ${newTheme.bg};
-                --main-text-color: ${newTheme.text};
-                --main-button-color: ${newTheme.button};`;
-			const { body } = document;
-			body.setAttribute('style', newColors);
+	onMount(() => {
+		const savedThemeName = browser && (localStorage.getItem(LS_KEYS.themeName) as ThemeName);
+		themeName.set(savedThemeName || 'pink');
+	});
+
+	const setThemeName = (newTheme: ThemeName) => {
+		themeName.set(newTheme);
+	};
+
+	themeName.subscribe((newTheme) => {
+		if (newTheme) {
+			scopedThemeName = newTheme;
+			injectCSSVars(newTheme);
 		}
 	});
+
+	const themeNames = Object.keys(themes) as ThemeName[];
 </script>
 
 <div class="container">
 	<div class="themeIcons">
-		{#each Object.keys(themes) as themeName}
+		{#each themeNames as themeName}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class={`themeIcon ${themes[themeName].button === $theme.button ? 'active' : ''}`}
+				class={`themeIcon ${themeName === scopedThemeName ? 'active' : ''}`}
 				style={`background: ${themes[themeName].bg}`}
-				on:click={() => setTheme(themes[themeName])}
+				on:click={() => setThemeName(themeName)}
 			/>
 		{/each}
 	</div>
@@ -41,9 +55,7 @@
 <style>
 	.container {
 		display: flex;
-		align-items: start;
-		justify-content: start;
-		gap: 1rem;
+		width: fit-content;
 		height: 2rem;
 	}
 

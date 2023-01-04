@@ -17,57 +17,62 @@
 	});
 </script>
 
-<main>
-	<Tooltip />
-	<Theme />
-	<div class="header">
-		<div class="about">
-			<b>Default Shortcuts</b> is a tool for searching keyboard shortcuts across browsers.<br />
+<div class="container">
+	<main>
+		<Tooltip />
+		<Theme />
+		<div class="header">
+			<div class="about">
+				<b>Default Shortcuts</b> is a tool for searching keyboard shortcuts across browsers.<br />
+			</div>
+			<Switcher />
 		</div>
-		<Switcher />
-	</div>
-	<div class="guide">
-		<Guide />
-		<!-- <div /> -->
-		<Reset />
-	</div>
-	{#if $keys.length > 0}
-		<Keys />
-	{:else}
-		<DemoKeys />
-	{/if}
-	<KeyDataSwitcher />
-	<Shortcuts />
-	<KeyListener />
-</main>
-<footer>
-	<div class="about">
-		Browsers: Chrome, Firefox, and Safari.<br />
-		OS: Windows and Mac.<br />
-		v.0.2.1<br />
-		<br />
-		<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
-			>Share on twitter</a
-		>
-	</div>
-	<div class="team">
-		2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
-		<a href="https://github.com/Sergushka">Aleksander</a>
-	</div>
-</footer>
+		<div class="guide">
+			<Guide />
+			<Reset />
+		</div>
+		{#if $keys.length > 0}
+			<Keys />
+		{:else}
+			<DemoKeys />
+		{/if}
+		<KeyDataSwitcher />
+		<Shortcuts />
+		<KeyListener />
+	</main>
+	<footer>
+		<div class="about">
+			Browsers: Chrome, Firefox, and Safari.<br />
+			OS: Windows and Mac.<br />
+			v.0.2.1<br />
+			<br />
+			<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
+				>Share on twitter</a
+			>
+		</div>
+		<div class="team">
+			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
+			<a href="https://github.com/Sergushka">Aleksander</a>
+		</div>
+	</footer>
+</div>
 
 <style>
+	.container {
+		display: flex;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+	}
 	main {
 		max-width: 800px;
 		margin: 0 auto;
-		min-height: calc(100vh - 200px);
+		flex: 1;
 	}
 	footer {
 		padding: 80px 0 30px;
-		text-align: center;
 		max-width: 800px;
 		margin: 0 auto;
-
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
@@ -83,7 +88,6 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
 		/* height: 30px; */
 	}
 	.guide {

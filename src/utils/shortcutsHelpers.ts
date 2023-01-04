@@ -1,3 +1,4 @@
+import type { Browser, OS, ShortcutsJSON } from '$types';
 import { getBrowserShortcutsJSON, getKeyList } from './helpers';
 
 export const getBrowserShortcut = (keys: KeyboardEvent[], os: OS, browser: Browser) => {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { demoShortcuts, demoShortcutsWindows } from '$data/demo';
 	import { os } from '$stores/ui';
-	import type { DemoKey } from '$types/global';
+	import type { DemoKey } from '$types';
 	import { onMount } from 'svelte';
 	import Key from './Key.svelte';
 

@@ -3,7 +3,7 @@ import chromeWin from '$data/chromeWin.json';
 import firefoxMac from '$data/firefoxMac.json';
 import firefoxWin from '$data/firefoxWin.json';
 import safari from '$data/safari.json';
-import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types/global';
+import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types';
 
 export const reorderKeys = (keys: KeyboardEvent[]) => {
 	let metaKey: KeyboardEvent | undefined;
