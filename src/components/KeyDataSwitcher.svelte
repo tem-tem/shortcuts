@@ -22,7 +22,7 @@
 		padding: 10px;
 		margin-top: 10px;
 		margin-left: auto;
-		width: 200px;
+		width: 220px;
 	}
 
 	.info {
