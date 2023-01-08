@@ -4,7 +4,7 @@ import { themes } from '$data/themes';
 export const themeToCSSVariables = (themeName: ThemeName): string => {
 	const themeColors = themes[themeName];
 
-	const cssVars = getCSSVarsFromThemeColors(themeColors)
+	const cssVars = getCSSVarsFromThemeColors(themeColors);
 	return constructCSSVarsString(cssVars);
 };
 
