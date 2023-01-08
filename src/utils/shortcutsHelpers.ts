@@ -54,6 +54,10 @@ function getKeyRegex(key: string) {
 			return 'ctrl|control';
 		case 'alt':
 			return 'alt|option';
+		case 'arrowleft':
+			return 'left arrow|left|←';
+		case 'arrowright':
+			return 'right arrow|right|→';
 		case ' ':
 			return `space|spacebar|space bar`;
 		default:
