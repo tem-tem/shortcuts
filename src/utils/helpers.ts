@@ -90,7 +90,10 @@ const getDisplaySymbolWindows = (key: KeyboardEvent | DemoKey) => {
 };
 
 export const getKeyList = (keys: KeyboardEvent[]) => {
-	return keys.map((k) => k.key.toLocaleLowerCase());
+	return keys.map((k) => {
+		if (k.code.includes('Key')) return k.code[3].toLocaleLowerCase();
+		return k.key.toLocaleLowerCase();
+	});
 };
 
 export function findByKey(object: ShortcutsJSON, key: string) {
