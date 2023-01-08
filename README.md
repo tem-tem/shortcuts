@@ -1,4 +1,4 @@
-[defaultshortucts.com](https://defaultshortucts.com) is a tool for looking up shortcuts across popular browsers.
+[defaultshortcuts.com](https://www.defaultshortcuts.com/) is a tool for looking up shortcuts across popular browsers.
 
 -----
 TODO:
