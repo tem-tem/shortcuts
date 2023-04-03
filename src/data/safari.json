@@ -1,56 +1,880 @@
-{
-	"Press the arrow keys.": "Scroll up, down, left, or right",
-	"Press Option while you press an arrow key.": "Scroll in larger increments",
-	"Page DownSpace bar": "Scroll down a screen",
-	"Page UpShift-Space bar": "Scroll up a screen",
-	"Command-Up ArrowCommand-Down Arrow": "Scroll to the top-left or bottom-left corner of the webpage",
-	"Command-F": "Search the current webpage",
-	"TabTab also highlights buttons and other controls if Keyboard Navigation is turned on in Keyboard settings.Open Keyboard settings for me": "Highlight the next field or pop-up menu on a webpage",
-	"Option-TabOption-Tab also highlights buttons and other controls if Keyboard Navigation is turned on in Keyboard settings.Open Keyboard settings for meTo swap the behavior of Tab and Option-Tab, turn on “Press Tab to highlight each item on a webpage” in the Advanced pane of Safari settings.": "Highlight the next field, pop-up menu, or clickable item (such as a link) on a webpage",
-	"Esc": "Cancel editing a bookmark name in the sidebar",
-	"Command-L": "Select the Smart Search field",
-	"Command-P": "Print the current webpage",
-	"Command-C": "Copy the selected item",
-	"Command-V": "Paste the most recently copied item",
-	"Shift-Command-\\": "Show tab overview",
-	"Command-click a linkCommand-click a bookmarkCommand-Return after typing in the Smart Search field.": "Open a webpage in a new tab",
-	"Shift-Command-click a linkShift-Command-click a bookmarkShift-Command-Return after typing in the Smart Search field.": "Open a webpage in a new tab, and make that tab the active tab",
-	"Control-Tab or Shift-Command-]": "Go to the next tab",
-	"Control-Shift-Tab or Shift-Command -[": "Go to the previous tab",
-	"Command-1 to Command-9": "Select one of your first nine tabs",
-	"Command-W": "Close the active tab",
-	"Option-click the Close button  on the tab you want to leave open": "Close all tabs except for one",
-	"Command-T": "Open a new tab",
-	"Shift-Command-T": "Reopen the last window you closed",
-	"Shift-Command-H": "Go to your homepage",
-	"Command-,": "Change Safari settings",
-	"Command-[": "Go back to the previous webpage",
-	"Command-]": "Go forward to the next webpage",
-	"Hold down the Back  or Forward  button until the list appears": "See a list of your recently visited webpages by name",
-	"Press Option and hold down the Back or Forward button until the list appears": "See a list of your recently visited webpages by web address (URL)",
-	"Press Command-Plus Sign (+) or Command-Minus Sign (-)": "Zoom website content",
-	"Press Option while you choose View > Make Text Bigger or View > Make Text Smaller": "Zoom website text",
-	"Option-click a link to the file": "Download a linked file",
-	"Double-click the file in the downloads list": "Open a downloaded file",
-	"Command-` (above the Tab key)": "Switch to another Safari window",
-	"Control-Command-2": "Show or Hide the Reading List sidebar",
-	"Shift-Command-D": "Add the current webpage",
-	"Shift-click a link to the webpage.": "Add a linked webpage",
-	"Control-click the webpage summary in the sidebar, then choose Remove Item.You can also swipe left over the webpage summary, then click Remove. Or, swipe all the way to the left until the webpage summary disappears.": "Remove a webpage",
-	"Shift-Command-R": "Open Reader",
-	"Click the Smart Search field to show the website’s full address and its icon, then drag the icon to the Favorites bar": "Add a bookmark to the Favorites bar",
-	"Command-click the folder in the Favorites bar": "Open all bookmarks from a folder in the Favorites bar",
-	"Drag the bookmark left or right": "Move a bookmark on the Favorites bar",
-	"Drag the bookmark off the top of the bar": "Remove a bookmark from the Favorites bar",
-	"Control-Command-1": "Show or Hide the Bookmarks sidebar",
-	"Command-click each bookmark and folderShift-click to extend the selection": "Select bookmarks and folders in the sidebar",
-	"Up Arrow or Down Arrow": "Select the next bookmark or folder",
-	"Space bar": "Open the selected bookmark",
-	"Space bar or Right Arrow": "Open the selected folder",
-	"Space bar or Left Arrow": "Close the selected folder",
-	"Select the bookmark, then press ReturnYou can also force click the bookmark": "Change the name or address of a bookmark",
-	"Return": "Finish editing a bookmark name",
-	"Option-click the New Folder button near the top-right corner": "Create a folder containing the selected bookmarks and folders in bookmarks view",
-	"Control-click the bookmark, then choose Delete": "Delete a bookmark",
-	"Command-R": "Reload the current webpage"
-}
+[
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "1"
+            ]
+        ],
+        "text": "Switch to first tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "9"
+            ]
+        ],
+        "text": "Switch to last tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Control",
+                "Tab"
+            ]
+        ],
+        "text": "Switch to next tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "1...8"
+            ]
+        ],
+        "text": "Switch to specified tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "W"
+            ]
+        ],
+        "text": "Close the current tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F4"
+            ]
+        ],
+        "text": "Close the current tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "F4"
+            ]
+        ],
+        "text": "Close the browser"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "T"
+            ]
+        ],
+        "text": "Reopen the last closed tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "T"
+            ]
+        ],
+        "text": "Open new tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "N"
+            ]
+        ],
+        "text": "Open new browser window"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Mouse Wheel up/ down"
+            ]
+        ],
+        "text": "Zoom in/ zoom out"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "0"
+            ]
+        ],
+        "text": "Default Zoom level"
+    },
+    {
+        "shortcut": [
+            [
+                "Spacebar"
+            ]
+        ],
+        "text": "FullScreen Mode"
+    },
+    {
+        "shortcut": [
+            [
+                "F11"
+            ]
+        ],
+        "text": "FullScreen Mode"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "L"
+            ]
+        ],
+        "text": "Go to address bar"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Enter"
+            ]
+        ],
+        "text": "Prefix www. and Post .com in address bar"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Enter"
+            ]
+        ],
+        "text": "Open the loaction in address bar"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "K"
+            ]
+        ],
+        "text": "Go to address bar for search"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "E"
+            ]
+        ],
+        "text": "Go to address bar for search"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Open the page search box"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "G"
+            ]
+        ],
+        "text": "Find the next match in page search box"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "G"
+            ]
+        ],
+        "text": "Find the previous match in page search box"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "P"
+            ]
+        ],
+        "text": "Print current page"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "S"
+            ]
+        ],
+        "text": "Save Current page"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "O"
+            ]
+        ],
+        "text": "Open a file of computer in browser"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "U"
+            ]
+        ],
+        "text": "Open the page source code"
+    },
+    {
+        "shortcut": [
+            [
+                "F12"
+            ]
+        ],
+        "text": "Open developer tools"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Start/finish editing bookmark name"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Control",
+                "S"
+            ]
+        ],
+        "text": "Save browser window"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "?"
+            ]
+        ],
+        "text": "Help"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Stop"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                ","
+            ]
+        ],
+        "text": "Preferences"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "="
+            ]
+        ],
+        "text": "Define in dictionary"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "shift",
+                ":"
+            ]
+        ],
+        "text": "Spelling correction"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                ";"
+            ]
+        ],
+        "text": "Spelling checking"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "",
+                ""
+            ]
+        ],
+        "text": "Zoom text"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "-"
+            ]
+        ],
+        "text": "Zoom out text"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                ","
+            ]
+        ],
+        "text": "Open Setting"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "*"
+            ]
+        ],
+        "text": "AppleScript Result"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "L"
+            ]
+        ],
+        "text": "Toggle Bookmark List"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "R"
+            ]
+        ],
+        "text": "Reload"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F5"
+            ]
+        ],
+        "text": "Reload and skip cache"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Left Arrow"
+            ]
+        ],
+        "text": "Back"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Delete"
+            ]
+        ],
+        "text": "Back"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Right Arrow",
+                "Delete"
+            ]
+        ],
+        "text": "Forward"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Shift",
+                "Delete"
+            ]
+        ],
+        "text": "Forward"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Up arrow"
+            ]
+        ],
+        "text": "Scroll to top-left corner of web page"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Down arrow"
+            ]
+        ],
+        "text": "Scroll to bottom-right corner of web page"
+    },
+    {
+        "shortcut": [
+            [
+                "Left/Right Arrow"
+            ]
+        ],
+        "text": "Scroll page horizontally"
+    },
+    {
+        "shortcut": [
+            [
+                "Up/down Arrow"
+            ]
+        ],
+        "text": "Scroll Page vertically"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Arrow Keys"
+            ]
+        ],
+        "text": "Scroll Page by fullscreen"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Home"
+            ]
+        ],
+        "text": "Homepage"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Arrow Left"
+            ]
+        ],
+        "text": "Page Back"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Arrow Right"
+            ]
+        ],
+        "text": "Page Forward"
+    },
+    {
+        "shortcut": [
+            [
+                "Middle-click on tab"
+            ]
+        ],
+        "text": "Close the tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Left-click"
+            ]
+        ],
+        "text": "Open a link in background tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Left-click"
+            ]
+        ],
+        "text": "Open a link in a new window"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "Left-click"
+            ]
+        ],
+        "text": "Open a link in foreground tab"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Left-click"
+            ]
+        ],
+        "text": "Download file"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Click on add bookmark"
+            ]
+        ],
+        "text": "Add bookmark directly"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Double-click"
+            ]
+        ],
+        "text": "Open bookmark in a new window"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Left-click New Folder"
+            ]
+        ],
+        "text": "Put selected items in folder"
+    },
+    {
+        "shortcut": [
+            [
+                "Spacebar"
+            ]
+        ],
+        "text": "Open bookmark"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "A"
+            ]
+        ],
+        "text": "Select all"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "B"
+            ]
+        ],
+        "text": "Show/hide favourites bar"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "D"
+            ]
+        ],
+        "text": "Add bookmark"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "H"
+            ]
+        ],
+        "text": "Hide browser"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "J"
+            ]
+        ],
+        "text": "Go to selection"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "M"
+            ]
+        ],
+        "text": "Minimize"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Q"
+            ]
+        ],
+        "text": "Close browser"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "C"
+            ]
+        ],
+        "text": "Copy"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "V"
+            ]
+        ],
+        "text": "Paste"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "X"
+            ]
+        ],
+        "text": "Cut"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Z"
+            ]
+        ],
+        "text": "Undo"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "Z"
+            ]
+        ],
+        "text": "Redo"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "F"
+            ]
+        ],
+        "text": "Full Screen mode"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "H"
+            ]
+        ],
+        "text": "Go to Home Page"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "M"
+            ]
+        ],
+        "text": "Maximize"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "P"
+            ]
+        ],
+        "text": "Page setup loading"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "S"
+            ]
+        ],
+        "text": "Start Sampling"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "T"
+            ]
+        ],
+        "text": "Stop Sampling"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "A"
+            ]
+        ],
+        "text": "Form autofilling"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "B"
+            ]
+        ],
+        "text": "Bluetooth transfer"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "K"
+            ]
+        ],
+        "text": "Block plugins"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "D"
+            ]
+        ],
+        "text": "Add bookmark to menu"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "W"
+            ]
+        ],
+        "text": "Close window"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "Y"
+            ]
+        ],
+        "text": "Make stickey notes"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "U"
+            ]
+        ],
+        "text": "Open URL"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "B"
+            ]
+        ],
+        "text": "Show all bookmarks"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "E"
+            ]
+        ],
+        "text": "Empty cache"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "M"
+            ]
+        ],
+        "text": "Minimize all"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "V"
+            ]
+        ],
+        "text": "View Source"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Control",
+                "D"
+            ]
+        ],
+        "text": "Add safaristand bookmarks"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "F"
+            ]
+        ],
+        "text": "Search from google"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "A"
+            ]
+        ],
+        "text": "Show Activities"
+    }
+]

@@ -1,9 +1,11 @@
 import chromeMac from '$data/chromeMac.json';
 import chromeWin from '$data/chromeWin.json';
 import firefoxMac from '$data/firefoxMac.json';
+// import mozilaMac from '$data/mozilaMac.json';
 import firefoxWin from '$data/firefoxWin.json';
 import safari from '$data/safari.json';
 import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types';
+import { ACTION_KEYS } from '$constants';
 
 export const reorderKeys = (keys: KeyboardEvent[]) => {
 	let metaKey: KeyboardEvent | undefined;
@@ -47,46 +49,10 @@ export const replaceKey = (key: KeyboardEvent, keys: KeyboardEvent[]) => {
 };
 
 export const getDisplaySymbol = (key: KeyboardEvent | DemoKey, os: 'windows' | 'mac') => {
-	switch (os) {
-		case 'windows':
-			return getDisplaySymbolWindows(key);
-		case 'mac':
-			return getDisplaySymbolMac(key);
+	if (ACTION_KEYS[key.key] != null) {
+		return ACTION_KEYS[key.key][os];
 	}
-};
-
-const getDisplaySymbolMac = (key: KeyboardEvent | DemoKey) => {
-	switch (key.key) {
-		case 'Meta':
-			return '⌘';
-		case 'Shift':
-			return '⇧';
-		case 'Control':
-			return '⌃';
-		case 'Alt':
-			return '⌥';
-		case ' ':
-			return 'Space';
-		default:
-			return key.key.toLocaleLowerCase();
-	}
-};
-
-const getDisplaySymbolWindows = (key: KeyboardEvent | DemoKey) => {
-	switch (key.key) {
-		case 'Meta':
-			return 'Win';
-		case 'Shift':
-			return '⇧';
-		case 'Control':
-			return 'Ctrl';
-		case 'Alt':
-			return 'Alt';
-		case ' ':
-			return 'Space';
-		default:
-			return key.key.toLocaleLowerCase();
-	}
+	return key.key.toLocaleLowerCase();
 };
 
 export const getKeyList = (keys: KeyboardEvent[]) => {
@@ -112,8 +78,4 @@ export const getBrowserShortcutsJSON = (browser: Browser, os: OS): ShortcutsJSON
 		case 'safari':
 			return safari;
 	}
-};
-
-export const isActionButton = (key: string) => {
-	return ['meta', 'shift', 'control', 'alt', ' '].includes(key);
 };

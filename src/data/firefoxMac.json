@@ -1,112 +1,1156 @@
-{
-	"command + ←command + [": "Back",
-	"command + →command + ]": "Forward",
-	"option + home": "Home",
-	"command + O": "Open File",
-	"command + R": "Reload",
-	"command + shift + R": "Reload (override cache)",
-	"command + .": "Stop",
-	"Tab": "Focus Next Link or Input Field",
-	"Shift": "Toggle Context Menu",
-	"fn + ↓": "Go Down a Screen",
-	"fn + ↑": "Go Up a Screen",
-	"command + ↓": "Mute audio",
-	"command + ↑": "Unmute audio",
-	"F6": "Focus Search Field in Library",
-	"command + P": "Print",
-	"option + return": "Open Address or Search in New Foreground Tab",
-	"command + S": "Save Page As",
-	"command + +": "Zoom in",
-	"command + -": "Zoom out",
-	"command + 0": "Automatic Zoom",
-	"command + C": "Copy",
-	"command + X": "Cut",
-	"delete": "Delete",
-	"Ctrl + Backspace": "Delete Word to the Left",
-	"Ctrl + Del": "Delete Word to the Right",
-	"Ctrl + ←": "Go one Word to the Left",
-	"Ctrl + →": "Go one Word to the Right",
-	"Home": "Select left, right, first or last tab. Deselect all other tabs.",
-	"End": "Seek to the end",
-	"Ctrl + Home": "Go to Beginning of Text",
-	"Ctrl + End": "Go to End of Text",
-	"command + V": "Paste",
-	"command + shift + V": "Paste (as plain text)",
-	"command + shift + Z": "Redo",
-	"command + A": "Select All",
-	"command + Z": "Undo",
-	"command + F": "Find in This Page",
-	"command + G": "Find Again",
-	"command + shift + G": "Find Previous",
-	"'": "Quick Find within link-text only",
-	"/": "Quick Find",
-	"Esc": "Close a Menu",
-	"option + ↓option + ↑": "View menu to switch, add or manage search engines",
-	"?": "Web Search with Default Search Engine",
-	"command + K": "Focus Search bar",
-	"command + ↓command + ↑": "Change the Default Search Engine",
-	"command + W": "Close Tab",
-	"command + shift + W": "Close Window",
-	"control + tab": "Cycle through Tabs in Recently Used Order",
-	"command + Q": "ExitQuit",
-	"control + page upcommand + option + ←": "Go one Tab to the Left",
-	"control + page downcommand + option + →": "Go one Tab to the Right",
-	"command + 1 to 8": "Go to Tab 1 to 8",
-	"command + 9": "Go to Last Tab",
-	"Ctrl": "Complete .org Address",
-	"command + shift + home": "Move Tab to start",
-	"command + shift + end": "Move Tab to end",
-	"control + M": "Mute/Unmute Audio",
-	"command + T": "New Tab",
-	"command + N": "New Window",
-	"command + shift + P": "New Private Window",
-	"option + shift + return": "Open Address or Search in New Background Tab",
-	"shift + return": "Open Focused Bookmark or Link in New Window",
-	"command + shift + return": "Open Focused Link in New Foreground Tab",
-	"command + return": "Open Focused Link in New Background Tab",
-	"return": "Open Focused Bookmark or Link in Current Tab",
-	"control + shift + tab": "Show All Tabs",
-	"command + shift + T": "Undo Close Tab",
-	"command + shift + N": "Undo Close Window",
-	"command + shift + X": "Moves the URL left or right (if cursor is in the address bar)",
-	"command": "Move the colored borderdotted rectangle to left, right, first or last tab.",
-	"command + shift + D": "Bookmark All Tabs",
-	"command + D": "Bookmark This Page",
-	"command + B": "Bookmarks sidebar",
-	"Show/hide the Bookmarks toolbar": "Show/hide the Bookmarks toolbar",
-	"Ctrl + Shift + O": "Show All Bookmarks (Library Window)",
-	"Space": "Show List of All Bookmarks",
-	"command + J": "Downloads",
-	"command + shift + A": "Add-ons",
-	"command + alt + I": "Toggle Developer Tools",
-	"command + alt + K": "Web Console",
-	"command + alt + C": "Inspector",
-	"command + shift + S": "Take a screenshot",
-	"Ctrl + Shift + Qcommand + alt + Q": "Network",
-	"command + alt + M": "Responsive Design View",
-	"command + U": "Page Source",
-	"command + shift + J": "Browser Console",
-	"command + I": "Page Info",
-	"N": "Next page",
-	"P": "Previous page",
-	"R": "Rotate the document clockwise",
-	"command + Alt + P": "Switch to Presentation Mode",
-	"S": "Choose Text Selection Tool",
-	"H": "Choose Hand Tool",
-	"command + Alt + G": "Focus the Page Number input box",
-	"F11": "Toggle Full Screen",
-	"Alt or F10": "Toggle Menu Bar activation (showing it temporarily when hidden)",
-	"Ctrl + Alt + R": "Toggle Reader Mode",
-	"F7": "Caret Browsing",
-	"control": "Complete .com Address",
-	"shift": "Delete Selected Autocomplete Entry",
-	"Del": "Delete Selected Autocomplete Entry",
-	"Space bar": "Toggle Play / Pause",
-	"↓": "Decrease volume",
-	"↑": "Increase volume",
-	"←": "Seek back 15 seconds",
-	"command + ←": "Seek back 10 %",
-	"→": "Seek forward 15 seconds",
-	"command + →": "Seek forward 10 %",
-	"command + space": "Select or deselect the tab with the colored borderdotted rectangle. The other tabs stay selected or deselected."
-}
+[
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "I"
+            ]
+        ],
+        "text": "Open Toolbox (with the most recent tool activated)"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "I"
+            ]
+        ],
+        "text": "Bring Toolbox to foreground (if the Toolbox is in a separate window and not in oreground)"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "F12"
+            ]
+        ],
+        "text": "Close Toolbox (if the Toolbox is in a separate window and in foreground)"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "K"
+            ]
+        ],
+        "text": "Open Web Console 1"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "C"
+            ]
+        ],
+        "text": "Toggle “Pick an element from the page” (opens the Toolbox and/or focus the Inspector ab)"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "F7"
+            ]
+        ],
+        "text": "Open Style Editor"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "F5"
+            ]
+        ],
+        "text": "Open Profiler"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "E"
+            ]
+        ],
+        "text": "Open Network Monitor 2"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "M"
+            ]
+        ],
+        "text": "Toggle Responsive Design Mode"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "J"
+            ]
+        ],
+        "text": "Open Browser Console"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "Shift",
+                "I"
+            ]
+        ],
+        "text": "Open Browser Toolbox"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "F9"
+            ]
+        ],
+        "text": "Storage Inspector"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "Z"
+            ]
+        ],
+        "text": "Open Debugger 3"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "]"
+            ]
+        ],
+        "text": "Cycle through tools left to right"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "["
+            ]
+        ],
+        "text": "Cycle through tools right to left"
+    },
+    {
+        "shortcut": [
+            [
+                "F1"
+            ]
+        ],
+        "text": "Toggle between active tool and settings."
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "D"
+            ]
+        ],
+        "text": "Toggle toolbox between the last 2 docking modes"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Toggle split console (except if console is the currently selected tool)"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "+"
+            ]
+        ],
+        "text": "Increase font size"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "-"
+            ]
+        ],
+        "text": "Decrease font size"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "0"
+            ]
+        ],
+        "text": "Reset font size"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "J"
+            ]
+        ],
+        "text": "Go to line"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "G"
+            ]
+        ],
+        "text": "Go to line"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Find in file"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "A"
+            ]
+        ],
+        "text": "Select all"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "X"
+            ]
+        ],
+        "text": "Cut"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "C"
+            ]
+        ],
+        "text": "Copy"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "V"
+            ]
+        ],
+        "text": "Paste"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Z"
+            ]
+        ],
+        "text": "Undo"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "Z"
+            ]
+        ],
+        "text": "Redo"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Y"
+            ]
+        ],
+        "text": "Redo"
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Indent"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Tab"
+            ]
+        ],
+        "text": "Unindent"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Up"
+            ]
+        ],
+        "text": "Move line(s) up"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "Down"
+            ]
+        ],
+        "text": "Move line(s) down"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "/"
+            ]
+        ],
+        "text": "Comment/uncomment line(s)"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "C"
+            ]
+        ],
+        "text": "Inspect Element"
+    },
+    {
+        "shortcut": [
+            [
+                "Click"
+            ]
+        ],
+        "text": "Select the element under the mouse and cancel picker mode"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Click"
+            ]
+        ],
+        "text": "Select the element under the mouse and stay in picker mode"
+    },
+    {
+        "shortcut": [
+            [
+                "Delete"
+            ]
+        ],
+        "text": "Delete the selected node"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Z"
+            ]
+        ],
+        "text": "Undo delete of a node"
+    },
+    {
+        "shortcut": [
+            [
+                "↓"
+            ]
+        ],
+        "text": "Move to next node (expanded nodes only)"
+    },
+    {
+        "shortcut": [
+            [
+                "↑"
+            ]
+        ],
+        "text": "Move to previous node"
+    },
+    {
+        "shortcut": [
+            [
+                "Home"
+            ]
+        ],
+        "text": "Move to first node in the tree."
+    },
+    {
+        "shortcut": [
+            [
+                "End"
+            ]
+        ],
+        "text": "Move to last node in the tree."
+    },
+    {
+        "shortcut": [
+            [
+                "→"
+            ]
+        ],
+        "text": "Expand currently selected node"
+    },
+    {
+        "shortcut": [
+            [
+                "←"
+            ]
+        ],
+        "text": "Collapse currently selected node"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "(When a node is selected) move inside the node so you can start stepping through attributes."
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Step forward through the attributes of a node"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Tab"
+            ]
+        ],
+        "text": "Step backward through the attributes of a node"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "(When an attribute is selected) start editing the attribute"
+    },
+    {
+        "shortcut": [
+            [
+                "H"
+            ]
+        ],
+        "text": "Hide/show the selected node"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Focus on the search box in the HTML pane"
+    },
+    {
+        "shortcut": [
+            [
+                "F2"
+            ]
+        ],
+        "text": "Edit as HTML"
+    },
+    {
+        "shortcut": [
+            [
+                "F2",
+                "Return"
+            ]
+        ],
+        "text": "Stop editing HTML"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Return"
+            ]
+        ],
+        "text": "Stop editing HTML"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "C"
+            ]
+        ],
+        "text": "Copy the selected node’s outer HTML"
+    },
+    {
+        "shortcut": [
+            [
+                "S"
+            ]
+        ],
+        "text": "Scroll the selected node into view"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Find the next match in the markup, when searching is active"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Return"
+            ]
+        ],
+        "text": "Find the previous match in the markup, when searching is active"
+    },
+    {
+        "shortcut": [
+            [
+                "←"
+            ]
+        ],
+        "text": "Move to the previous element in the breadcrumbs bar"
+    },
+    {
+        "shortcut": [
+            [
+                "→"
+            ]
+        ],
+        "text": "Move to the next element in the breadcrumbs bar"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Tab"
+            ]
+        ],
+        "text": "Focus the HTML pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Focus the CSS pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Focus on the search box in the CSS pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Clear search box content (only when the search box is focused, and content has been entered)"
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Step forward through properties and values"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Tab"
+            ]
+        ],
+        "text": "Step backward through properties and values"
+    },
+    {
+        "shortcut": [
+            [
+                "Return or Space"
+            ]
+        ],
+        "text": "Start editing property or value (Rules view only, when a property or value is selected, but not already being edited)"
+    },
+    {
+        "shortcut": [
+            [
+                "↓"
+            ]
+        ],
+        "text": "Cycle down through auto-complete suggestions (Rules view only, when a property or value is being edited)"
+    },
+    {
+        "shortcut": [
+            [
+                "↑"
+            ]
+        ],
+        "text": "Cycle up through auto-complete suggestions (Rules view only, when a property or value is being edited)"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Choose current auto-complete suggestion (Rules view only, when a property or value is being edited)"
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Choose current auto-complete suggestion (Rules view only, when a property or value is being edited)"
+    },
+    {
+        "shortcut": [
+            [
+                "↑"
+            ]
+        ],
+        "text": "Increment selected value by 1"
+    },
+    {
+        "shortcut": [
+            [
+                "↓"
+            ]
+        ],
+        "text": "Decrement selected value by 1"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "PageUp"
+            ]
+        ],
+        "text": "Increment selected value by 100"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "PageDown"
+            ]
+        ],
+        "text": "Decrement selected value by 100"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "↑"
+            ]
+        ],
+        "text": "Increment selected value by 10"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "↓"
+            ]
+        ],
+        "text": "Decrement selected value by 10"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "↑"
+            ]
+        ],
+        "text": "Increment selected value by 0.1"
+    },
+    {
+        "shortcut": [
+            [
+                "Alt",
+                "↓"
+            ]
+        ],
+        "text": "Decrement selected value by 0.1"
+    },
+    {
+        "shortcut": [
+            [
+                "Space"
+            ]
+        ],
+        "text": "Show/hide more information about current property (Computed view only, when a property is selected)"
+    },
+    {
+        "shortcut": [
+            [
+                "F1"
+            ]
+        ],
+        "text": "Open MDN reference page about current property (Computed view only, when a property is selected)"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Open current CSS file in Style Editor (Computed view only, when more information is shown for a property and a CSS file reference is focused)."
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "W"
+            ]
+        ],
+        "text": "Close current file"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Search for a string in the current file"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "F"
+            ]
+        ],
+        "text": "Search for a string in all files"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "G"
+            ]
+        ],
+        "text": "Find next in the current file"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "P"
+            ]
+        ],
+        "text": "Search for scripts by name"
+    },
+    {
+        "shortcut": [
+            [
+                "F8 4"
+            ]
+        ],
+        "text": "Resume execution when at a breakpoint"
+    },
+    {
+        "shortcut": [
+            [
+                "F10 4"
+            ]
+        ],
+        "text": "Step over"
+    },
+    {
+        "shortcut": [
+            [
+                "F11 4"
+            ]
+        ],
+        "text": "Step into"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "F11 4"
+            ]
+        ],
+        "text": "Step out"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "B"
+            ]
+        ],
+        "text": "Toggle breakpoint on the currently selected line"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Shift",
+                "B"
+            ]
+        ],
+        "text": "Toggle conditional breakpoint on the currently selected line"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "K"
+            ]
+        ],
+        "text": "Open the Web Console"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "F"
+            ]
+        ],
+        "text": "Search in the message display pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "Click"
+            ]
+        ],
+        "text": "Open the object inspector pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Clear the object inspector pane"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Opt",
+                "K"
+            ]
+        ],
+        "text": "Focus on the command line"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "L   From Firefox 67:   Meta",
+                "K"
+            ]
+        ],
+        "text": "Clear output"
+    },
+    {
+        "shortcut": [
+            [
+                "Home"
+            ]
+        ],
+        "text": "Scroll to start of console output (only if the command line is empty)"
+    },
+    {
+        "shortcut": [
+            [
+                "End"
+            ]
+        ],
+        "text": "Scroll to end of console output (only if the command line is empty)"
+    },
+    {
+        "shortcut": [
+            [
+                "PageUp"
+            ]
+        ],
+        "text": "Page up through console output"
+    },
+    {
+        "shortcut": [
+            [
+                "PageDown"
+            ]
+        ],
+        "text": "Page down through console output"
+    },
+    {
+        "shortcut": [
+            [
+                "↑"
+            ]
+        ],
+        "text": "Go backward through command history"
+    },
+    {
+        "shortcut": [
+            [
+                "↓"
+            ]
+        ],
+        "text": "Go forward through command history"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "R"
+            ]
+        ],
+        "text": "Initiate reverse search through command history/step backwards through matching commands"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "S"
+            ]
+        ],
+        "text": "Step forward through matching command history (after initiating reverse search)"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "A"
+            ]
+        ],
+        "text": "Move to the beginning of the line"
+    },
+    {
+        "shortcut": [
+            [
+                "Ctrl",
+                "E"
+            ]
+        ],
+        "text": "Move to the end of the line"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Execute the current expression"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Return"
+            ]
+        ],
+        "text": "Add a new line, for entering multiline expressions"
+    },
+    {
+        "shortcut": [
+            [
+                "Tab"
+            ]
+        ],
+        "text": "Choose the current autocomplete suggestion"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Cancel the autocomplete popup"
+    },
+    {
+        "shortcut": [
+            [
+                "↑"
+            ]
+        ],
+        "text": "Move to the previous autocomplete suggestion"
+    },
+    {
+        "shortcut": [
+            [
+                "↓"
+            ]
+        ],
+        "text": "Move to the next autocomplete suggestion"
+    },
+    {
+        "shortcut": [
+            [
+                "PageUp"
+            ]
+        ],
+        "text": "Page up through autocomplete suggestions"
+    },
+    {
+        "shortcut": [
+            [
+                "PageDown"
+            ]
+        ],
+        "text": "Page down through autocomplete suggestions"
+    },
+    {
+        "shortcut": [
+            [
+                "Home"
+            ]
+        ],
+        "text": "Scroll to start of autocomplete suggestions"
+    },
+    {
+        "shortcut": [
+            [
+                "End"
+            ]
+        ],
+        "text": "Scroll to end of autocomplete suggestions"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "F7"
+            ]
+        ],
+        "text": "Open the Style Editor"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Space"
+            ]
+        ],
+        "text": "Open autocomplete popup"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "G"
+            ]
+        ],
+        "text": "Find Next"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "Meta",
+                "G"
+            ]
+        ],
+        "text": "Find Previous"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "Alt",
+                "F"
+            ]
+        ],
+        "text": "Replace"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "P"
+            ]
+        ],
+        "text": "Focus the filter input"
+    },
+    {
+        "shortcut": [
+            [
+                "Meta",
+                "S"
+            ]
+        ],
+        "text": "Save file to disk"
+    },
+    {
+        "shortcut": [
+            [
+                "Return"
+            ]
+        ],
+        "text": "Select the current color"
+    },
+    {
+        "shortcut": [
+            [
+                "Esc"
+            ]
+        ],
+        "text": "Dismiss the Eyedropper"
+    },
+    {
+        "shortcut": [
+            [
+                "ArrowKeys"
+            ]
+        ],
+        "text": "Move by 1 pixel"
+    },
+    {
+        "shortcut": [
+            [
+                "Shift",
+                "ArrowKeys"
+            ]
+        ],
+        "text": "Move by 10 pixels"
+    }
+]

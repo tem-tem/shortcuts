@@ -1,16 +1,18 @@
 import type { Browser, OS, ShortcutsJSON } from '$types';
+import Immutable from 'immutable';
 import { getBrowserShortcutsJSON, getKeyList } from './helpers';
 
 export const getBrowserShortcut = (keys: KeyboardEvent[], os: OS, browser: Browser) => {
 	const keyList = getKeyList(keys);
+
 	const targetBrowser = getBrowserShortcutsJSON(browser, os);
 
-	const matches = findKeyListMatches(keyList, targetBrowser);
-	const filteredMatches = filterMatchesAgainstInactiveActionButtons(matches, keyList);
-
-	if (filteredMatches.length === 0) return [];
-	return filteredMatches.map((m) => {
-		return { action: targetBrowser[m], shortcut: m };
+	const keyMatches = findKeyListMatches(keyList, targetBrowser);
+	
+	if (keyMatches.length === 0) return [];
+	return keyMatches.map((key) => {
+		const match = targetBrowser[key];
+		return { action: match["text"], shortcut: match["shortcut"] };
 	});
 };
 
@@ -29,10 +31,15 @@ function filterMatchesAgainstInactiveActionButtons(matches: string[], keyList: s
 }
 
 function findKeyListMatches(keyList: string[], targetBrowser: ShortcutsJSON) {
-	const keyListRegex = getKeyListRegex(keyList);
-	const re = new RegExp(`${keyListRegex}.+`, 'i');
-	const matches = Object.keys(targetBrowser).filter((k) => k.match(re));
-	return matches;
+	const keySet = Immutable.Set(keyList);	
+	
+	const res = Object.keys(targetBrowser)?.filter((k) => {
+		let shortcutList = targetBrowser[k]["shortcut"][0].map((sh) => sh.toLocaleLowerCase());
+
+		return keySet.isSubset(shortcutList);
+	}) || [];
+	
+	return res;
 }
 
 function getKeyListRegex(keyList: string[]) {
