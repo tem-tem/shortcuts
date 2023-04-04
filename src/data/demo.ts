@@ -2,57 +2,69 @@ export const demoShortcuts = [
 	[
 		{
 			key: 'Meta',
-			code: 'MetaLeft'
+			code: 'MetaLeft',
+			keyCode: 91
 		},
 		{
 			key: 'Shift',
-			code: 'ShiftLeft'
+			code: 'ShiftLeft',
+			keyCode: 16
 		},
 		{
 			key: 'r',
-			code: 'KeyR'
+			code: 'KeyR',
+			keyCode: 82
 		}
 	],
 	[
 		{
 			key: 'Meta',
-			code: 'MetaLeft'
+			code: 'MetaLeft',
+			keyCode: 91
 		},
 		{
 			key: 'v',
-			code: 'KeyV'
+			code: 'KeyV',
+			keyCode: 86
 		}
 	],
 	[
 		{
 			key: 'Meta',
-			code: 'MetaLeft'
+			code: 'MetaLeft',
+			keyCode: 91
 		},
 		{
 			key: 'Shift',
-			code: 'ShiftLeft'
+			code: 'ShiftLeft',
+			keyCode: 16
 		},
 		{
 			key: 't',
-			code: 'KeyT'
+			code: 'KeyT',
+			keyCode: 84
 		}
 	],
 	[
 		{
 			key: 'Meta',
-			code: 'MetaLeft'
+			code: 'MetaLeft',
+			keyCode: 91
 		},
 		{
 			key: 'Shift',
-			code: 'ShiftLeft'
+			code: 'ShiftLeft',
+			keyCode: 16
 		},
 		{
 			key: 'Alt',
-			code: 'AltLeft'
+			code: 'AltLeft',
+			keyCode: 18
 		},
 		{
 			key: 't',
-			code: 'KeyT'
+			code: 'KeyT',
+			keyCode: 84
 		}
 	]
 ];
@@ -61,39 +73,69 @@ export const demoShortcutsWindows = [
 	[
 		{
 			key: 'Ctrl',
-			code: 'ControlLeft'
+			code: 'ControlLeft',
+			keyCode: 91
 		},
 		{
 			key: 'Shift',
-			code: 'ShiftLeft'
+			code: 'ShiftLeft',
+			keyCode: 16
 		},
 		{
 			key: 'r',
-			code: 'KeyR'
+			code: 'KeyR',
+			keyCode: 82
 		}
 	],
 	[
 		{
 			key: 'Ctrl',
-			code: 'ControlLeft'
+			code: 'ControlLeft',
+			keyCode: 91
 		},
 		{
 			key: 'v',
-			code: 'KeyV'
+			code: 'KeyV',
+			keyCode: 86
 		}
 	],
 	[
 		{
-			key: 'Shift',
-			code: 'ShiftLeft'
+			key: 'Ctrl',
+			code: 'ControlLeft',
+			keyCode: 91
 		},
 		{
-			key: 'Alt',
-			code: 'AltLeft'
+			key: 'Shift',
+			code: 'ShiftLeft',
+			keyCode: 16
 		},
 		{
 			key: 't',
-			code: 'KeyT'
+			code: 'KeyT',
+			keyCode: 84
+		}
+	],
+	[
+		{
+			key: 'Ctrl',
+			code: 'ControlLeft',
+			keyCode: 91
+		},
+		{
+			key: 'Shift',
+			code: 'ShiftLeft',
+			keyCode: 16
+		},
+		{
+			key: 'Alt',
+			code: 'AltLeft',
+			keyCode: 18
+		},
+		{
+			key: 't',
+			code: 'KeyT',
+			keyCode: 84
 		}
 	]
 ];
