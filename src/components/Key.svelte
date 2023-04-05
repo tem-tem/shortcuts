@@ -27,6 +27,10 @@
 			<span class="row" on:click={copyData(key.key)}>
 				<span>.key:</span><span class="rowValue">{key.key}</span>
 			</span>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<span class="row" on:click={copyData(key.keyCode)}>
+				<span>.keyCode:</span><span class="rowValue">{key.keyCode}</span>
+			</span>
 		</div>
 	{/if}
 </kbd>
