@@ -1,755 +1,334 @@
 [
-    {
-        "shortcut": [
-            [
-                "Control",
-                "n"
-            ]
-        ],
-        "text": "Open a new window"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "n"
-            ]
-        ],
-        "text": "Open a new window in Incognito mode"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "t"
-            ]
-        ],
-        "text": "Open a new tab, and jump to it"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "t"
-            ]
-        ],
-        "text": "Reopen previously closed tabs in the order they were closed"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Tab or Control",
-                "PgDn"
-            ]
-        ],
-        "text": "Jump to the next open tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "Tab or Control",
-                "PgUp"
-            ]
-        ],
-        "text": "Jump to the previous open tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "1 through Control",
-                "8"
-            ]
-        ],
-        "text": "Jump to a specific tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "9"
-            ]
-        ],
-        "text": "Jump to the rightmost tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Home"
-            ]
-        ],
-        "text": "Open your home page in the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Left arrow"
-            ]
-        ],
-        "text": "Open the previous page from your browsing history in the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Right arrow"
-            ]
-        ],
-        "text": "Open the next page from your browsing history in the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "w or Control",
-                "F4"
-            ]
-        ],
-        "text": "Close the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "w or Alt",
-                "F4"
-            ]
-        ],
-        "text": "Close the current window"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Space then n"
-            ]
-        ],
-        "text": "Minimize the current window"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Space then x"
-            ]
-        ],
-        "text": "Maximize the current window"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "f then x"
-            ]
-        ],
-        "text": "Quit Google Chrome"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "PgUp or Control",
-                "Shift",
-                "PgDn"
-            ]
-        ],
-        "text": "Move tabs right or left"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "f or Alt",
-                "e"
-            ]
-        ],
-        "text": "Open the Chrome menu"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "b"
-            ]
-        ],
-        "text": "Show or hide the Bookmarks bar"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "o"
-            ]
-        ],
-        "text": "Open the Bookmarks Manager"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "h"
-            ]
-        ],
-        "text": "Open the History page in a new tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "j"
-            ]
-        ],
-        "text": "Open the Downloads page in a new tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Esc"
-            ]
-        ],
-        "text": "Open the Chrome Task Manager"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Alt",
-                "t"
-            ]
-        ],
-        "text": "Set focus on the first item in the Chrome toolbar"
-    },
-    {
-        "shortcut": [
-            [
-                "F10"
-            ]
-        ],
-        "text": "Set focus on the rightmost item in the Chrome toolbar"
-    },
-    {
-        "shortcut": [
-            [
-                "F6"
-            ]
-        ],
-        "text": "Switch focus to unfocused dialog (if showing) and all toolbars"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "f or F3"
-            ]
-        ],
-        "text": "Open the Find Bar to search the current page"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "g"
-            ]
-        ],
-        "text": "Jump to the next match to your Find Bar search"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "g"
-            ]
-        ],
-        "text": "Jump to the previous match to your Find Bar search"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "j or F12"
-            ]
-        ],
-        "text": "Open Developer Tools"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "Delete"
-            ]
-        ],
-        "text": "Open the Clear Browsing Data options"
-    },
-    {
-        "shortcut": [
-            [
-                "F1"
-            ]
-        ],
-        "text": "Open the Chrome Help Center in a new tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "m"
-            ]
-        ],
-        "text": "Log in a different user or browse as a Guest"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Shift",
-                "i"
-            ]
-        ],
-        "text": "Open a feedback form"
-    },
-    {
-        "shortcut": [
-            [
-                "F7"
-            ]
-        ],
-        "text": "Turn on caret browsing"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "F6"
-            ]
-        ],
-        "text": "Skip to web contents"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Shift",
-                "a"
-            ]
-        ],
-        "text": "Focus on inactive dialogs"
-    },
-    {
-        "shortcut": [
-            [
-                "Type a search term",
-                "Enter"
-            ]
-        ],
-        "text": "Search with your default search engine"
-    },
-    {
-        "shortcut": [
-            [
-                "Type a search engine name and press Tab"
-            ]
-        ],
-        "text": "Search using a different search engine"
-    },
-    {
-        "shortcut": [
-            [
-                "Type a site name",
-                "Control",
-                "Enter"
-            ]
-        ],
-        "text": "Add www. and .com to a site name, and open it in the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Type a site name",
-                "Control",
-                "Shift",
-                "Enter"
-            ]
-        ],
-        "text": "Add www. and .com to a site name, and open it in a new window"
-    },
-    {
-        "shortcut": [
-            [
-                "Type a search term",
-                "Alt",
-                "Enter"
-            ]
-        ],
-        "text": "Open a new tab and perform a Google search"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "l or Alt",
-                "d or F6"
-            ]
-        ],
-        "text": "Jump to the address bar"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "k or Control",
-                "e"
-            ]
-        ],
-        "text": "Search from anywhere on the page"
-    },
-    {
-        "shortcut": [
-            [
-                "Down arrow to highlight",
-                "Shift",
-                "Delete"
-            ]
-        ],
-        "text": "Remove predictions from your address bar"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "F5"
-            ]
-        ],
-        "text": "Move cursor to the address bar"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "p"
-            ]
-        ],
-        "text": "Open options to print the current page"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "s"
-            ]
-        ],
-        "text": "Open options to save the current page"
-    },
-    {
-        "shortcut": [
-            [
-                "F5 or Control",
-                "r"
-            ]
-        ],
-        "text": "Reload the current page"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "F5 or Control",
-                "Shift",
-                "r"
-            ]
-        ],
-        "text": "Reload the current page, ignoring cached content"
-    },
-    {
-        "shortcut": [
-            [
-                "Esc"
-            ]
-        ],
-        "text": "Stop the page loading"
-    },
-    {
-        "shortcut": [
-            [
-                "Tab"
-            ]
-        ],
-        "text": "Browse clickable items moving forward"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Tab"
-            ]
-        ],
-        "text": "Browse clickable items moving backward"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "o",
-                "Select a file"
-            ]
-        ],
-        "text": "Open a file from your computer in Chrome"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "u"
-            ]
-        ],
-        "text": "Display non-editable HTML source code for the current page"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "d"
-            ]
-        ],
-        "text": "Save your current webpage as a bookmark"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "d"
-            ]
-        ],
-        "text": "Save all open tabs as bookmarks in a new folder"
-    },
-    {
-        "shortcut": [
-            [
-                "F11"
-            ]
-        ],
-        "text": "Turn full-screen mode on or off"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Scroll your mousewheel up"
-            ]
-        ],
-        "text": "Make everything on the page bigger"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Scroll your mousewheel down"
-            ]
-        ],
-        "text": "Make everything on the page smaller"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "0"
-            ]
-        ],
-        "text": "Return everything on the page to default size"
-    },
-    {
-        "shortcut": [
-            [
-                "Space or PgDn"
-            ]
-        ],
-        "text": "Scroll down a webpage, a screen at a time"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Space or PgUp"
-            ]
-        ],
-        "text": "Scroll up a webpage, a screen at a time"
-    },
-    {
-        "shortcut": [
-            [
-                "Home"
-            ]
-        ],
-        "text": "Go to the top of the page"
-    },
-    {
-        "shortcut": [
-            [
-                "End"
-            ]
-        ],
-        "text": "Go to the bottom of the page"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Scroll your mousewheel"
-            ]
-        ],
-        "text": "Scroll horizontally on the page"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Left arrow"
-            ]
-        ],
-        "text": "Move your cursor to the beginning of the previous word in a text field"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Right arrow"
-            ]
-        ],
-        "text": "Move your cursor to the next word"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Backspace"
-            ]
-        ],
-        "text": "Delete the previous word in a text field"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Home"
-            ]
-        ],
-        "text": "Open the Home page in the current tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Drag a link to a tab"
-            ]
-        ],
-        "text": "Open a link in a current tab (mouse only)"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Click a link"
-            ]
-        ],
-        "text": "Open a link in new background tab"
-    },
-    {
-        "shortcut": [
-            [
-                "Control",
-                "Shift",
-                "Click a link"
-            ]
-        ],
-        "text": "Open a link, and jump to it"
-    },
-    {
-        "shortcut": [
-            [
-                "Drag a link to a blank area of the tab strip"
-            ]
-        ],
-        "text": "Open a link, and jump to it (mouse only)"
-    },
-    {
-        "shortcut": [
-            [
-                "Shift",
-                "Click a link"
-            ]
-        ],
-        "text": "Open a link in a new window"
-    },
-    {
-        "shortcut": [
-            [
-                "Drag the tab out of the tab strip"
-            ]
-        ],
-        "text": "Open a tab in a new window (mouse only)"
-    },
-    {
-        "shortcut": [
-            [
-                "Drag the tab into an existing window"
-            ]
-        ],
-        "text": "Move a tab to a current window (mouse only)"
-    },
-    {
-        "shortcut": [
-            [
-                "Press Esc while dragging"
-            ]
-        ],
-        "text": "Return a tab to its original position"
-    },
-    {
-        "shortcut": [
-            [
-                "Drag the web address to the Bookmarks Bar"
-            ]
-        ],
-        "text": "Save the current webpage as a bookmark"
-    },
-    {
-        "shortcut": [
-            [
-                "Alt",
-                "Click a link"
-            ]
-        ],
-        "text": "Download the target of a link"
-    },
-    {
-        "shortcut": [
-            [
-                "Right-click Back  or click & hold Back  \n          Right-click Next  or click & hold Next"
-            ]
-        ],
-        "text": "Display your browsing history"
-    },
-    {
-        "shortcut": [
-            [
-                "Double-click a blank area of the tab strip"
-            ]
-        ],
-        "text": "Switch between maximized and windowed modes"
-    }
+	{
+		"shortcut": [["Control", "n"]],
+		"text": "Open a new window"
+	},
+	{
+		"shortcut": [["Control", "Shift", "n"]],
+		"text": "Open a new window in Incognito mode"
+	},
+	{
+		"shortcut": [["Control", "t"]],
+		"text": "Open a new tab, and jump to it"
+	},
+	{
+		"shortcut": [["Control", "Shift", "t"]],
+		"text": "Reopen previously closed tabs in the order they were closed"
+	},
+	{
+		"shortcut": [["Control", "Tab"]],
+		"text": "Jump to the next open tab"
+	},
+	{
+		"shortcut": [["Control", "PgDn"]],
+		"text": "Jump to the next open tab"
+	},
+	{
+		"shortcut": [["Control", "Shift", "PgUp"]],
+		"text": "Jump to the previous open tab"
+	},
+	{
+		"shortcut": [["Control", "Shift", "Tab"]],
+		"text": "Jump to the previous open tab"
+	},
+	{
+		"shortcut": [["Control", "1"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "2"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "3"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "4"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "5"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "6"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "7"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "8"]],
+		"text": "Jump to a specific tab"
+	},
+	{
+		"shortcut": [["Control", "9"]],
+		"text": "Jump to the rightmost tab"
+	},
+	{
+		"shortcut": [["Alt", "Home"]],
+		"text": "Open your home page in the current tab"
+	},
+	{
+		"shortcut": [["Alt", "Left arrow"]],
+		"text": "Open the previous page from your browsing history in the current tab"
+	},
+	{
+		"shortcut": [["Alt", "Right arrow"]],
+		"text": "Open the next page from your browsing history in the current tab"
+	},
+	{
+		"shortcut": [["Control", "w"]],
+		"text": "Close the current tab"
+	},
+	{
+		"shortcut": [["Control", "F4"]],
+		"text": "Close the current tab"
+	},
+	{
+		"shortcut": [["Control", "Shift", "w"]],
+		"text": "Close the current window"
+	},
+	{
+		"shortcut": [["Alt", "F4"]],
+		"text": "Close the current window"
+	},
+	{
+		"shortcut": [["Alt", "Space"], ["n"]],
+		"text": "Minimize the current window"
+	},
+	{
+		"shortcut": [["Alt", "Space"], ["x"]],
+		"text": "Maximize the current window"
+	},
+	{
+		"shortcut": [["Alt", "f"], ["x"]],
+		"text": "Quit Google Chrome"
+	},
+	{
+		"shortcut": [["Control", "Shift", "PgDn"]],
+		"text": "Move tabs left"
+	},
+	{
+		"shortcut": [["Control", "Shift", "PgUp"]],
+		"text": "Move tabs right"
+	},
+	{
+		"shortcut": [["Alt", "f"]],
+		"text": "Open the Chrome menu"
+	},
+	{
+		"shortcut": [["Alt", "e"]],
+		"text": "Open the Chrome menu"
+	},
+	{
+		"shortcut": [["Control", "Shift", "b"]],
+		"text": "Show or hide the Bookmarks bar"
+	},
+	{
+		"shortcut": [["Control", "Shift", "o"]],
+		"text": "Open the Bookmarks Manager"
+	},
+	{
+		"shortcut": [["Control", "h"]],
+		"text": "Open the History page in a new tab"
+	},
+	{
+		"shortcut": [["Control", "j"]],
+		"text": "Open the Downloads page in a new tab"
+	},
+	{
+		"shortcut": [["Shift", "Esc"]],
+		"text": "Open the Chrome Task Manager"
+	},
+	{
+		"shortcut": [["Shift", "Alt", "t"]],
+		"text": "Set focus on the first item in the Chrome toolbar"
+	},
+	{
+		"shortcut": [["F10"]],
+		"text": "Set focus on the rightmost item in the Chrome toolbar"
+	},
+	{
+		"shortcut": [["F6"]],
+		"text": "Switch focus to unfocused dialog (if showing) and all toolbars"
+	},
+	{
+		"shortcut": [["Control", "f"]],
+		"text": "Open the Find Bar to search the current page"
+	},
+	{
+		"shortcut": [["F3"]],
+		"text": "Open the Find Bar to search the current page"
+	},
+	{
+		"shortcut": [["Control", "g"]],
+		"text": "Jump to the next match to your Find Bar search"
+	},
+	{
+		"shortcut": [["Control", "Shift", "g"]],
+		"text": "Jump to the previous match to your Find Bar search"
+	},
+	{
+		"shortcut": [["Control", "Shift", "j"]],
+		"text": "Open Developer Tools"
+	},
+	{
+		"shortcut": [["F12"]],
+		"text": "Open Developer Tools"
+	},
+	{
+		"shortcut": [["Control", "Shift", "Delete"]],
+		"text": "Open the Clear Browsing Data options"
+	},
+	{
+		"shortcut": [["F1"]],
+		"text": "Open the Chrome Help Center in a new tab"
+	},
+	{
+		"shortcut": [["Control", "Shift", "m"]],
+		"text": "Log in a different user or browse as a Guest"
+	},
+	{
+		"shortcut": [["Alt", "Shift", "i"]],
+		"text": "Open a feedback form"
+	},
+	{
+		"shortcut": [["F7"]],
+		"text": "Turn on caret browsing"
+	},
+	{
+		"shortcut": [["Control", "F6"]],
+		"text": "Skip to web contents"
+	},
+	{
+		"shortcut": [["Alt", "Shift", "a"]],
+		"text": "Focus on inactive dialogs"
+	},
+	{
+		"shortcut": [["F6"]],
+		"text": "Jump to the address bar"
+	},
+	{
+		"shortcut": [["Control", "l"]],
+		"text": "Jump to the address bar"
+	},
+	{
+		"shortcut": [["Alt", "d"]],
+		"text": "Jump to the address bar"
+	},
+	{
+		"shortcut": [["Control", "k"]],
+		"text": "Search from anywhere on the page"
+	},
+	{
+		"shortcut": [["Control", "e"]],
+		"text": "Search from anywhere on the page"
+	},
+	{
+		"shortcut": [["Control", "F5"]],
+		"text": "Move cursor to the address bar"
+	},
+	{
+		"shortcut": [["Control", "p"]],
+		"text": "Open options to print the current page"
+	},
+	{
+		"shortcut": [["Control", "s"]],
+		"text": "Open options to save the current page"
+	},
+	{
+		"shortcut": [["F5"]],
+		"text": "Reload the current page"
+	},
+	{
+		"shortcut": [["Control", "r"]],
+		"text": "Reload the current page"
+	},
+	{
+		"shortcut": [["Shift", "F5"]],
+		"text": "Reload the current page, ignoring cached content"
+	},
+	{
+		"shortcut": [["Control", "Shift", "r"]],
+		"text": "Reload the current page, ignoring cached content"
+	},
+	{
+		"shortcut": [["Esc"]],
+		"text": "Stop the page loading"
+	},
+	{
+		"shortcut": [["Tab"]],
+		"text": "Browse clickable items moving forward"
+	},
+	{
+		"shortcut": [["Shift", "Tab"]],
+		"text": "Browse clickable items moving backward"
+	},
+	{
+		"shortcut": [["Control", "o"]],
+		"text": "Open a file from your computer in Chrome"
+	},
+	{
+		"shortcut": [["Control", "u"]],
+		"text": "Display non-editable HTML source code for the current page"
+	},
+	{
+		"shortcut": [["Control", "d"]],
+		"text": "Save your current webpage as a bookmark"
+	},
+	{
+		"shortcut": [["Control", "Shift", "d"]],
+		"text": "Save all open tabs as bookmarks in a new folder"
+	},
+	{
+		"shortcut": [["F11"]],
+		"text": "Turn full-screen mode on or off"
+	},
+	{
+		"shortcut": [["Control", "0"]],
+		"text": "Return everything on the page to default size"
+	},
+	{
+		"shortcut": [["Space"]],
+		"text": "Scroll down a webpage, a screen at a time"
+	},
+	{
+		"shortcut": [["PgDn"]],
+		"text": "Scroll down a webpage, a screen at a time"
+	},
+	{
+		"shortcut": [["PgUp"]],
+		"text": "Scroll up a webpage, a screen at a time"
+	},
+	{
+		"shortcut": [["Shift", "Space"]],
+		"text": "Scroll up a webpage, a screen at a time"
+	},
+	{
+		"shortcut": [["Home"]],
+		"text": "Go to the top of the page"
+	},
+	{
+		"shortcut": [["End"]],
+		"text": "Go to the bottom of the page"
+	},
+	{
+		"shortcut": [["Control", "Left arrow"]],
+		"text": "Move your cursor to the beginning of the previous word in a text field"
+	},
+	{
+		"shortcut": [["Control", "Right arrow"]],
+		"text": "Move your cursor to the next word"
+	},
+	{
+		"shortcut": [["Control", "Backspace"]],
+		"text": "Delete the previous word in a text field"
+	},
+	{
+		"shortcut": [["Alt", "Home"]],
+		"text": "Open the Home page in the current tab"
+	}
 ]
