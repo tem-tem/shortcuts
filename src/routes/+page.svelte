@@ -12,9 +12,17 @@
 	import Theme from '$components/Theme.svelte';
 	import Tooltip from '$components/Tooltip.svelte';
 
+    import { version } from '$app/environment'
+
+//   console.log(packageJson.version);
+
 	onMount(() => {
 		window.focus();
 	});
+	// read VERSION from package.json
+	// const version = import.meta.env.VITE_VERSION;
+	// console.log(import.meta)
+
 </script>
 
 <div class="container">
@@ -44,7 +52,7 @@
 		<div class="about">
 			Browsers: Chrome, Firefox, and Safari.<br />
 			OS: Windows and Mac.<br />
-			v.0.2.1<br />
+			v. {version}<br />
 			<br />
 			<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
 				>Share on twitter</a
