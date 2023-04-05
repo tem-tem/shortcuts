@@ -7,48 +7,41 @@ export const getBrowserShortcut = (keys: KeyboardEvent[], os: OS, browser: Brows
 
 	const targetBrowser = getBrowserShortcutsJSON(browser, os);
 
-	const keyMatches = findKeyListMatches(keyList, targetBrowser);
-	
-	if (keyMatches.length === 0) return [];
-	return keyMatches.map((key) => {
-		const match = targetBrowser[key];
-		return { action: match["text"], shortcut: match["shortcut"] };
+	const keyMatchIndecies = findKeyListMatches(keyList, targetBrowser);
+
+	if (keyMatchIndecies.length === 0) return [];
+	return keyMatchIndecies.map((index) => {
+		const match = targetBrowser[index];
+		return {
+			action: match.text,
+			shortcut: match.shortcut[0].join(' + '),
+			unmatchedKeys: match.shortcut[0].length - keyList.length,
+			os,
+			browser
+		};
 	});
 };
 
-function filterMatchesAgainstInactiveActionButtons(matches: string[], keyList: string[]) {
-	return matches.filter((m) => {
-		const inactiveActionButtons = ['meta', 'control', 'shift', 'alt'].filter(
-			(k) => !keyList.includes(k)
-		);
-		let matchHasInactiveButton = false;
-		inactiveActionButtons.forEach((b) => {
-			const re = new RegExp(`(?=.*(${getKeyRegex(b)})).+`, 'i');
-			if (m.match(re)) matchHasInactiveButton = true;
-		});
-		return !matchHasInactiveButton;
-	});
-}
-
 function findKeyListMatches(keyList: string[], targetBrowser: ShortcutsJSON) {
-	const keySet = Immutable.Set(keyList);	
-	
-	const res = Object.keys(targetBrowser)?.filter((k) => {
-		let shortcutList = targetBrowser[k]["shortcut"][0].map((sh) => sh.toLocaleLowerCase());
+	const keySet = Immutable.Set(keyList);
+	const indecies = Array.from(targetBrowser.keys());
 
-		return keySet.isSubset(shortcutList);
-	}) || [];
-	
+	const res =
+		indecies?.filter((k) => {
+			let shortcutList = targetBrowser[k]['shortcut'][0].map((shortcutKey) =>
+				shortcutKey.toLocaleLowerCase()
+			);
+
+			for (let i = 0; i < keySet.size; i++) {
+				let key = keySet.toArray()[i];
+				let regex = getKeyRegex(key);
+				let match = shortcutList.some((sh) => sh.match(regex));
+				if (!match) return false;
+			}
+			return true;
+		}) || [];
+
 	return res;
-}
-
-function getKeyListRegex(keyList: string[]) {
-	if (keyList.length === 1) {
-		const regex = getKeyRegex(keyList[0]);
-		return `(?=.*(^(${regex})$))`;
-	} else {
-		return keyList.map((k) => `(?=.*(${getKeyRegex(k)}))`).join('');
-	}
 }
 
 function getKeyRegex(key: string) {
@@ -62,9 +55,17 @@ function getKeyRegex(key: string) {
 		case 'alt':
 			return 'alt|option';
 		case 'arrowleft':
-			return 'left arrow|left|←';
+			return 'left arrow|left|←|arrowkeys';
 		case 'arrowright':
-			return 'right arrow|right|→';
+			return 'right arrow|right|→|arrowkeys';
+		case 'arrowup':
+			return 'up arrow|↑|arrowkeys';
+		case 'arrowdown':
+			return 'down arrow|↓|arrowkeys';
+		case 'pageup':
+			return 'page up|pgup|pg up|pg up|pgup|pg up|pg up';
+		case 'pagedown':
+			return 'page down|pgdown|pg down|pg down|pgdown|pg down|pg down';
 		case ' ':
 			return `space|spacebar|space bar`;
 		default:

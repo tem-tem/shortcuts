@@ -62,11 +62,6 @@ export const getKeyList = (keys: KeyboardEvent[]) => {
 	});
 };
 
-export function findByKey(object: ShortcutsJSON, key: string) {
-	const foundKey = Object.keys(object).find((k) => k.toLowerCase() === key.toLowerCase());
-	return foundKey ? object[foundKey] : null;
-}
-
 export const getBrowserShortcutsJSON = (browser: Browser, os: OS): ShortcutsJSON => {
 	switch (browser) {
 		case 'chrome':

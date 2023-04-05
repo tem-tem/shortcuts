@@ -9,12 +9,15 @@
 	$: safariMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'safari') : [];
 	$: chromeWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'chrome') : [];
 	$: firefoxWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'firefox') : [];
-	$: numberShortcuts =
-		chromeMacShortcuts.length +
-		firefoxMacShortcuts.length +
-		safariMacShortcuts.length +
-		chromeWindowsShortcuts.length +
-		firefoxWindowsShortcuts.length;
+
+	$: matchedShortcuts = [
+		...chromeMacShortcuts,
+		...firefoxMacShortcuts,
+		...safariMacShortcuts,
+		...chromeWindowsShortcuts,
+		...firefoxWindowsShortcuts
+	].sort((a, b) => a.unmatchedKeys - b.unmatchedKeys);
+	$: numberShortcuts = matchedShortcuts.length;
 </script>
 
 <div class="messageBlock">
@@ -34,51 +37,11 @@
 	<div class="divider" in:fade={{ duration: 200 }} />
 {/if}
 <div class={`cardsGrid ${numberShortcuts > 0 ? 'show' : ''}`}>
-	{#if chromeMacShortcuts.length > 0}
-		{#each chromeMacShortcuts as shortcut}
+	{#if matchedShortcuts.length > 0}
+		{#each matchedShortcuts as shortcut}
 			<ShortcutCards
-				browser="chrome"
-				os="mac"
-				title={shortcut.action}
-				shortcut={shortcut.shortcut}
-			/>
-		{/each}
-	{/if}
-	{#if firefoxMacShortcuts.length > 0}
-		{#each firefoxMacShortcuts as shortcut}
-			<ShortcutCards
-				browser="firefox"
-				os="mac"
-				title={shortcut.action}
-				shortcut={shortcut.shortcut}
-			/>
-		{/each}
-	{/if}
-	{#if safariMacShortcuts.length > 0}
-		{#each safariMacShortcuts as shortcut}
-			<ShortcutCards
-				browser="safari"
-				os="mac"
-				title={shortcut.action}
-				shortcut={shortcut.shortcut}
-			/>
-		{/each}
-	{/if}
-	{#if chromeWindowsShortcuts.length > 0}
-		{#each chromeWindowsShortcuts as shortcut}
-			<ShortcutCards
-				browser="chrome"
-				os="windows"
-				title={shortcut.action}
-				shortcut={shortcut.shortcut}
-			/>
-		{/each}
-	{/if}
-	{#if firefoxWindowsShortcuts.length > 0}
-		{#each firefoxWindowsShortcuts as shortcut}
-			<ShortcutCards
-				browser="firefox"
-				os="windows"
+				browser={shortcut.browser}
+				os={shortcut.os}
 				title={shortcut.action}
 				shortcut={shortcut.shortcut}
 			/>
