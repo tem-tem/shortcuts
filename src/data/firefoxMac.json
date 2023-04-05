@@ -389,7 +389,7 @@
 	},
 	{
 		"shortcut": [["Ctrl", "L"]],
-		"text": "Clear output"
+		"text": "Jump to the address bar"
 	},
 	{
 		"shortcut": [["Ctrl", "K"]],
