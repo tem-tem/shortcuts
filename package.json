@@ -31,5 +31,8 @@
 	"volta": {
 		"node": "18.12.1",
 		"yarn": "3.3.1"
+	},
+	"dependencies": {
+		"@vercel/analytics": "^0.1.11"
 	}
 }
