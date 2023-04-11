@@ -12,9 +12,9 @@
 	import Theme from '$components/Theme.svelte';
 	import Tooltip from '$components/Tooltip.svelte';
 
-    import { version } from '$app/environment'
+	import { version } from '$app/environment';
 
-//   console.log(packageJson.version);
+	//   console.log(packageJson.version);
 
 	onMount(() => {
 		window.focus();
@@ -22,7 +22,6 @@
 	// read VERSION from package.json
 	// const version = import.meta.env.VITE_VERSION;
 	// console.log(import.meta)
-
 </script>
 
 <div class="container">
