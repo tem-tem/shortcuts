@@ -3,16 +3,19 @@
 	import { getBrowserShortcut } from '$utils/shortcutsHelpers';
 	import { fade } from 'svelte/transition';
 	import ShortcutCards from './ShortcutCards.svelte';
-	import { os } from '$stores/ui';
 
-	$: chromeShortcuts = $keys.length ? getBrowserShortcut($keys, $os, 'chrome') : [];
-	$: firefoxShortcuts = $keys.length ? getBrowserShortcut($keys, $os, 'firefox') : [];
-	$: safariShortcuts = $keys.length ? getBrowserShortcut($keys, $os, 'safari') : [];
+	$: chromeMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'chrome') : [];
+	$: firefoxMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'firefox') : [];
+	$: safariMacShortcuts = $keys.length ? getBrowserShortcut($keys, 'mac', 'safari') : [];
+	$: chromeWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'chrome') : [];
+	$: firefoxWindowsShortcuts = $keys.length ? getBrowserShortcut($keys, 'windows', 'firefox') : [];
 
 	$: matchedShortcuts = [
-		...chromeShortcuts,
-		...firefoxShortcuts,
-		...safariShortcuts,
+		...chromeMacShortcuts,
+		...firefoxMacShortcuts,
+		...safariMacShortcuts,
+		...chromeWindowsShortcuts,
+		...firefoxWindowsShortcuts
 	].sort((a, b) => a.unmatchedKeys - b.unmatchedKeys);
 	$: numberShortcuts = matchedShortcuts.length;
 </script>
