@@ -1,11 +1,16 @@
 import chromeMac from '$data/chromeMac.json';
 import chromeWin from '$data/chromeWin.json';
 import firefoxMac from '$data/firefoxMac.json';
-// import mozilaMac from '$data/mozilaMac.json';
 import firefoxWin from '$data/firefoxWin.json';
 import safari from '$data/safari.json';
 import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types';
 import { ACTION_KEYS } from '$constants';
+import jsonData from '$data/json-index.json';
+
+export const getBrowserList = () => {
+	console.log(jsonData);
+	// return Object.keys(jsonData);
+};
 
 export const reorderKeys = (keys: KeyboardEvent[]) => {
 	let metaKey: KeyboardEvent | undefined;

@@ -24,9 +24,9 @@ const config = {
 			$data: './src/data',
 			$constants: './src/constants'
 		},
-	    version: {
-	      name: pkg.version,
-	    }
+		version: {
+			name: pkg.version
+		}
 	}
 };
 

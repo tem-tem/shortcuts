@@ -4,11 +4,11 @@ export const themes: Record<ThemeName, ThemeColors> = {
 	light: {
 		bg: '#f4f7ff',
 		text: '#28293c',
-		button: '#0f0f0f'
+		button: '#2879a4;'
 	},
 	dark: {
 		bg: '#28293c',
-		text: '#f4f7ff',
+		text: '#90a5d7;',
 		button: '#f4f7ff'
 	},
 	pink: {

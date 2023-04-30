@@ -12,9 +12,10 @@
 	import Theme from '$components/Theme.svelte';
 	import Tooltip from '$components/Tooltip.svelte';
 
-    import { version } from '$app/environment'
+	import { version } from '$app/environment';
+	import ShortcutList from '$components/ShortcutList.svelte';
 
-//   console.log(packageJson.version);
+	//   console.log(packageJson.version);
 
 	onMount(() => {
 		window.focus();
@@ -22,7 +23,6 @@
 	// read VERSION from package.json
 	// const version = import.meta.env.VITE_VERSION;
 	// console.log(import.meta)
-
 </script>
 
 <div class="container">
@@ -31,21 +31,23 @@
 		<Theme />
 		<div class="header">
 			<div class="about">
-				<b>Default Shortcuts</b> is a tool for searching keyboard shortcuts across browsers.<br />
+				<b>Default Shortcuts</b> is an open-source tool for searching keyboard shortcuts across
+				browsers.<br />
 			</div>
-			<Switcher />
+			<!-- <Switcher /> -->
 		</div>
-		<div class="guide">
+		<!-- <div class="guide">
 			<Guide />
 			<Reset />
-		</div>
-		{#if $keys.length > 0}
+		</div> -->
+		<!-- {#if $keys.length > 0}
 			<Keys />
 		{:else}
 			<DemoKeys />
 		{/if}
-		<KeyDataSwitcher />
-		<Shortcuts />
+		<KeyDataSwitcher /> -->
+		<ShortcutList />
+		<!-- <Shortcuts /> -->
 		<KeyListener />
 	</main>
 	<footer>
@@ -89,6 +91,9 @@
 	.about {
 		max-width: 50%;
 		text-align: left;
+	}
+	.about b {
+		font-weight: bold;
 	}
 	.team {
 		text-align: left;
