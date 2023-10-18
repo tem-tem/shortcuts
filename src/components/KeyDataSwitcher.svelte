@@ -38,7 +38,7 @@
 		text-indent: -9999px;
 		width: 4em;
 		height: 2em;
-		background: var(--main-buttonT-color);
+		background: var(--main-button-color-opacity-5);
 		display: block;
 		border-radius: 2em;
 		position: relative;
@@ -65,7 +65,7 @@
 	} */
 
 	input:checked + label:after {
-		left: calc(100% - 0.1em);
+		left: calc(100% - 0.3em);
 		transform: translateX(-100%);
 	}
 

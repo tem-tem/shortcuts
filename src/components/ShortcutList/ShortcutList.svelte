@@ -25,7 +25,7 @@
 							<span class="app">
 								<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
 							</span>
-							<div class="text">{app.text}</div>
+							<div class="text textBody">{app.text}</div>
 							<span class="os">
 								<Icon name={app.os} src={`icons/os/${app.os}.png`} />
 							</span>
@@ -99,7 +99,7 @@
 		border-radius: 0.3rem;
 
 		color: var(--main-button-color);
-		background-color: var(--main-buttonT-color);
+		background-color: var(--main-button-color-opacity-1);
 
 		text-transform: uppercase;
 
@@ -141,23 +141,10 @@
 		opacity: 0.5;
 	}
 
-	.metadata {
-		display: flex;
-		align-items: center;
-		/* gap: 0.5rem; */
-
-		text-transform: capitalize;
-		font-size: 1rem;
-
-		/* outline: 1px dotted var(--main-text-color); */
-		border-radius: 1rem;
-		/* margin-left: -0.2rem; */
-	}
-
 	.text {
-		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		/* font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 		flex: 1;
-		font-size: 1.2rem;
+		/* font-size: 1.2rem; */
 		/* margin-left: -0.3rem; */
 	}
 </style>

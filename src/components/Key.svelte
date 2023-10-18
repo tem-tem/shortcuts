@@ -38,7 +38,10 @@
 <style>
 	kbd {
 		color: var(--main-button-color);
-		background-color: var(--main-buttonT-color);
+		background: linear-gradient(
+			var(--main-button-color-opacity-0),
+			var(--main-button-color-opacity-3)
+		);
 
 		display: flex;
 		flex-direction: column;
@@ -49,12 +52,15 @@
 
 		padding: 0.5em 0.8em;
 
-		border: 5px solid;
+		border: 1px solid;
+		/* border: 5px solid; */
 		border-radius: 24px;
+		box-shadow: 0 0 0 7px, 0 15px 0 7px;
 	}
 	.smallKBD {
-		border: 4px solid;
+		/* border: 4px solid; */
 		border-radius: 16px;
+		box-shadow: 0 0 0 7px, 0 10px 0 7px;
 	}
 	kbd .label {
 		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,8 +71,8 @@
 	}
 
 	kbd .labelOnly {
-		min-width: 42px;
-		min-height: 36px;
+		min-width: 52px;
+		min-height: 52px;
 	}
 
 	.data {

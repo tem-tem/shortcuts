@@ -13,7 +13,6 @@
 	import { version } from '$app/environment';
 	import FilteredShortcutList from '$components/ShortcutList/FilteredShortcutList.svelte';
 
-
 	onMount(() => {
 		window.focus();
 	});

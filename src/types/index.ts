@@ -21,5 +21,6 @@ export type ThemeColors = Record<ColorNames, string>;
 export type ThemeName = (typeof THEME_TYPES)[number];
 
 export type CSSVarName = `--main-${ColorNames}-color`;
+type CSSVarNameWithOpacity = `--main-${ColorNames}-color-opacity-${number}`;
 
-export type CSSVariables = Record<CSSVarName, string>;
+export type CSSVariables = Record<CSSVarName | CSSVarNameWithOpacity, string>;
