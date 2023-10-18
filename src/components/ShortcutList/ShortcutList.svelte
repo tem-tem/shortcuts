@@ -72,7 +72,7 @@
 	.keyGroup {
 		display: flex;
 
-		padding: 2rem;
+		padding: 1rem 2rem 2rem;
 
 		margin-right: 2rem;
 	}
@@ -103,7 +103,7 @@
 
 		text-transform: uppercase;
 
-		box-shadow: 0 0 0 0.2rem var(--main-text-color), 0 0.3rem 0 0.2rem var(--main-text-color);
+		box-shadow: 0 0.3rem 0 0.2rem var(--main-text-color-opacity-2);
 	}
 
 	.appList {
