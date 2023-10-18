@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Keys from '$components/Keys.svelte';
-	import Shortcuts from '$components/Shortcuts.svelte';
 	import { onMount } from 'svelte';
 	import Reset from '$components/Reset.svelte';
 	import KeyListener from '$components/KeyListener.svelte';
