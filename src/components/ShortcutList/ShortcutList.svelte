@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Icon from '../Icon.svelte';
-	
+	import { osMac, osWindows } from '$stores/filter';
+
 	export let list: any[];
 </script>
 
@@ -19,15 +20,17 @@
 
 			<div class="appList">
 				{#each shortcut.apps as app}
-					<div class="appListItem">
-						<span class="app">
-							<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
-						</span>
-						<div class="text">{app.text}</div>
-						<span class="os">
-							<Icon name={app.os} src={`icons/os/${app.os}.png`} />
-						</span>
-					</div>
+					{#if (app.os === 'mac' && $osMac) || (app.os === 'windows' && $osWindows)}
+						<div class="appListItem">
+							<span class="app">
+								<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
+							</span>
+							<div class="text">{app.text}</div>
+							<span class="os">
+								<Icon name={app.os} src={`icons/os/${app.os}.png`} />
+							</span>
+						</div>
+					{/if}
 				{/each}
 			</div>
 		</div>

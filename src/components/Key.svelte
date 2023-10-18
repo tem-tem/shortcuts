@@ -60,7 +60,7 @@
 		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 3em;
 		line-height: 36px;
-    	font-weight: bold;
+		font-weight: bold;
 		text-transform: capitalize;
 	}
 
