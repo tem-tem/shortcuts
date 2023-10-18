@@ -98,12 +98,12 @@
 
 		border-radius: 0.3rem;
 
-		color: var(--main-button-color);
-		background-color: var(--main-button-color-opacity-1);
+		color: var(--main-text-color);
+		background-color: var(--main-text-color-opacity-1);
 
 		text-transform: uppercase;
 
-		box-shadow: 0 0 0 0.2rem var(--main-button-color), 0 0.3rem 0 0.2rem var(--main-button-color);
+		box-shadow: 0 0 0 0.2rem var(--main-text-color), 0 0.3rem 0 0.2rem var(--main-text-color);
 	}
 
 	.appList {

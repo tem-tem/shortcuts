@@ -25,7 +25,7 @@
 			</span>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.key)}>
-				<span>.key:</span><span class="rowValue">{key.key}</span>
+				<span>.key:</span><span class="rowValue">"{key.key}"</span>
 			</span>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.keyCode)}>
@@ -40,14 +40,14 @@
 		color: var(--main-button-color);
 		background: linear-gradient(
 			var(--main-button-color-opacity-0),
-			var(--main-button-color-opacity-3)
+			var(--main-button-color-opacity-2)
 		);
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
-		min-width: 3em;
+		min-width: 10em;
 		min-height: 3em;
 
 		padding: 0.5em 0.8em;
@@ -60,6 +60,7 @@
 	.smallKBD {
 		/* border: 4px solid; */
 		border-radius: 16px;
+		min-width: 3em;
 		box-shadow: 0 0 0 7px, 0 10px 0 7px;
 	}
 	kbd .label {
@@ -79,6 +80,7 @@
 		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
+		gap: 0.2rem;
 	}
 
 	.data .row {

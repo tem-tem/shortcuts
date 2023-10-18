@@ -7,13 +7,13 @@ export const themes: Record<ThemeName, ThemeColors> = {
 		button: '#2879a4'
 	},
 	dark: {
-		bg: '#28293c',
+		bg: '#000000',
 		text: '#90a5d7;',
-		button: '#f4f7ff'
+		button: '#37b8ea'
 	},
-	pink: {
-		bg: '#F9DBBD',
+	orange: {
+		bg: '#ececec',
 		text: '#0D0628',
-		button: '#9A348E'
+		button: '#de3a1e'
 	}
 };

@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { LS_KEYS } from '$constants';
 	import { themes } from '$data/themes';
-	import { themeName } from '$stores/theme';
+	import { themeName, isLight } from '$stores/theme';
 	import type { ThemeName } from '$types';
 	import { themeToCSSVariables } from '$utils/themeToCSSVariables';
 	import { onMount } from 'svelte';
@@ -22,7 +22,9 @@
 
 	onMount(() => {
 		const savedThemeName = browser && (localStorage.getItem(LS_KEYS.themeName) as ThemeName);
-		themeName.set(savedThemeName || 'pink');
+		const safeSavedThemeNave =
+			savedThemeName && Object.keys(themes).includes(savedThemeName) ? savedThemeName : 'orange';
+		themeName.set(safeSavedThemeNave);
 	});
 
 	const setThemeName = (newTheme: ThemeName) => {
@@ -43,13 +45,16 @@
 	<div class="themeIcons">
 		{#each themeNames as themeName}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div
+			<!-- <div
 				class={`themeIcon ${themeName === scopedThemeName ? 'active' : ''}`}
-				style={`background: ${themes[themeName].bg}`}
+				style={`background: ${themes[themeName].button}`}
 				on:click={() => setThemeName(themeName)}
-			/>
+			/> -->
 		{/each}
 	</div>
+
+	<!-- checkbox tag for isLight -->
+	<!-- <input type="checkbox" bind:checked={$isLight} /> -->
 </div>
 
 <style>
