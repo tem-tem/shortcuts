@@ -1,10 +1,11 @@
 <script lang="ts">
-	import shortcutList from '$data/json-index.json';
-	import Icon from './Icon.svelte';
+	import Icon from '../Icon.svelte';
+	
+	export let list: any[];
 </script>
 
 <div class="shortcutList">
-	{#each shortcutList as shortcut}
+	{#each list as shortcut}
 		<div class="shortcutListItem">
 			<div class="keys">
 				{#each shortcut.shortcut as keyGroups}
@@ -19,23 +20,13 @@
 			<div class="appList">
 				{#each shortcut.apps as app}
 					<div class="appListItem">
+						<span class="app">
+							<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
+						</span>
 						<div class="text">{app.text}</div>
-
-						<div class="metadata">
-							<span class="app">
-								<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
-								<span class="name">
-									{app.app}
-								</span>
-							</span>
-							<span class="os">
-								<Icon name={app.os} src={`icons/os/${app.os}.png`} />
-								<span class="name">
-									{app.os}
-								</span>
-							</span>
-							<!-- <span class="category">{app.category}</span> -->
-						</div>
+						<span class="os">
+							<Icon name={app.os} src={`icons/os/${app.os}.png`} />
+						</span>
 					</div>
 				{/each}
 			</div>
@@ -50,21 +41,26 @@
 
 	.shortcutList {
 		/* max-width: 45%; */
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
 	}
 
 	.shortcutListItem {
-		margin-bottom: 6rem;
+		/* margin-bottom: 6rem; */
 
-		/* outline: 1px dotted var(--main-text-color); */
-		border-radius: 2rem;
+		outline: 1px dotted var(--main-text-color);
+		border-radius: 1rem;
 		overflow: hidden;
 
-		box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05), 0 0 10px 0 rgba(0, 0, 0, 0.05);
+		width: 100%;
+		/* box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05), 0 0 10px 0 rgba(0, 0, 0, 0.05); */
 	}
 
 	.keys {
 		display: flex;
-		background-color: rgba(0, 0, 0, 0.105);
+		/* background-color: rgba(0, 0, 0, 0.105); */
 		/* position: sticky;
         top: 10px; */
 		/* margin-bottom: 2rem; */
@@ -99,21 +95,29 @@
 
 		border-radius: 0.3rem;
 
-		color: var(--main-bg-color);
-		background-color: var(--main-button-color);
+		color: var(--main-button-color);
+		background-color: var(--main-buttonT-color);
 
 		text-transform: uppercase;
 
-		box-shadow: 0 0 0 0.2rem var(--main-text-color), 0 0.3rem 0 0.2rem var(--main-text-color);
+		box-shadow: 0 0 0 0.2rem var(--main-button-color), 0 0.3rem 0 0.2rem var(--main-button-color);
+	}
+
+	.appList {
+		display: flex;
+		flex-direction: column;
+		/* gap: 1rem; */
 	}
 
 	.appListItem {
 		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding: 2rem;
+		align-items: center;
+		/* flex-direction: column; */
+		/* gap: 1rem; */
+		padding: 0 1rem;
+		justify-content: space-between;
 
-		/* border-top: 1px dotted var(--main-text-color); */
+		border-top: 1px dotted var(--main-text-color);
 	}
 
 	.appListItem:last-child {
@@ -124,30 +128,33 @@
 
 	.app,
 	.os {
-		display: flex;
+		/* display: flex;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 0.5rem; */
 
-		outline: 1px dotted var(--main-text-color);
-		border-radius: 1rem;
 		padding: 0.5rem;
+	}
+	.os {
+		opacity: 0.5;
 	}
 
 	.metadata {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		/* gap: 0.5rem; */
 
 		text-transform: capitalize;
 		font-size: 1rem;
 
+		/* outline: 1px dotted var(--main-text-color); */
+		border-radius: 1rem;
 		/* margin-left: -0.2rem; */
 	}
 
 	.text {
 		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		flex: 1;
-		font-size: 1.8rem;
+		font-size: 1.2rem;
 		/* margin-left: -0.3rem; */
 	}
 </style>

@@ -1,8 +1,8 @@
 {
-	"arrow_down": ["↓", "down arrow", "down", "arrowkeys"],
-	"arrow_up": ["↑", "up arrow", "up", "arrowkeys"],
-	"arrow_right": ["→", "right arrow", "right", "arrowkeys"],
-	"arrow_left": ["←", "left arrow", "left", "arrowkeys"],
+	"arrow_down": ["↓", "down arrow", "down", "arrowkeys", "arrowdown"],
+	"arrow_up": ["↑", "up arrow", "up", "arrowkeys", "arrowup"],
+	"arrow_right": ["→", "right arrow", "right", "arrowkeys", "arrowright"],
+	"arrow_left": ["←", "left arrow", "left", "arrowkeys", "arrowleft"],
 	"enter": ["return", "↵", "⏎"],
 	"shift": ["⇧", "shift key"],
 	"control": ["ctrl", "ctl", "control key", "⌃"],

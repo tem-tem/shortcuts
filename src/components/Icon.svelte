@@ -5,7 +5,7 @@
 
 <div>
 	{#if src}
-		<img {src} alt={name} />
+		<img {src} alt={name} title={name} />
 	{:else if name}
 		<span class="icon">{name[0]}</span>
 	{/if}
@@ -22,8 +22,8 @@
 
 		border-radius: 8px;
 		padding: 2px;
-		background-color: white;
-		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+		/* background-color: white; */
+		/* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); */
 		/* outline: 1px solid var(--main-text-color); */
 	}
 

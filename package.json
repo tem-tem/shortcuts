@@ -1,6 +1,6 @@
 {
 	"name": "browser-shortcuts",
-	"version": "0.3",
+	"version": "0.5",
 	"private": true,
 	"scripts": {
 		"dev": "npm run genJSON && vite dev",

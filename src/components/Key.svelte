@@ -13,12 +13,12 @@
 	};
 </script>
 
-<kbd in:scale={{ duration: 200 }}>
-	<span class="label">
+<kbd in:scale={{ duration: 200 }} class:smallKBD={!$fullInfo}>
+	<span class="label" class:labelOnly={!$fullInfo}>
 		{getDisplaySymbol(key, $os)}
 	</span>
 	{#if $fullInfo}
-		<div class="data">
+		<div class="data" in:scale={{ duration: 200 }}>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.code)}>
 				<span>.code:</span><span class="rowValue">{key.code}</span>
@@ -37,6 +37,9 @@
 
 <style>
 	kbd {
+		color: var(--main-button-color);
+		background-color: var(--main-buttonT-color);
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -44,15 +47,26 @@
 		min-width: 3em;
 		min-height: 3em;
 
-		padding: 0.2em 0.5em;
+		padding: 0.5em 0.8em;
 
-		border: 2px solid;
-		border-radius: 5px;
+		border: 5px solid;
+		border-radius: 24px;
+	}
+	.smallKBD {
+		border: 4px solid;
+		border-radius: 16px;
 	}
 	kbd .label {
+		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 3em;
 		line-height: 36px;
+    	font-weight: bold;
 		text-transform: capitalize;
+	}
+
+	kbd .labelOnly {
+		min-width: 42px;
+		min-height: 36px;
 	}
 
 	.data {

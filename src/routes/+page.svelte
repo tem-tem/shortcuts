@@ -13,7 +13,9 @@
 	import Tooltip from '$components/Tooltip.svelte';
 
 	import { version } from '$app/environment';
-	import ShortcutList from '$components/ShortcutList.svelte';
+	import ShortcutList from '$components/ShortcutList/ShortcutList.svelte';
+	import FilteredShortcutList from '$components/ShortcutList/FilteredShortcutList.svelte';
+	import FullShortcutList from '$components/ShortcutList/FullShortcutList.svelte';
 
 	//   console.log(packageJson.version);
 
@@ -36,47 +38,57 @@
 			</div>
 			<!-- <Switcher /> -->
 		</div>
-		<!-- <div class="guide">
-			<Guide />
+		<div class="guide">
+			{#if $keys.length > 0}
+				<KeyDataSwitcher />
+			{:else}
+				<Guide />
+			{/if}
 			<Reset />
-		</div> -->
-		<!-- {#if $keys.length > 0}
+		</div>
+	</main>
+	<div class="mainKeysContainer">
+		{#if $keys.length > 0}
 			<Keys />
 		{:else}
 			<DemoKeys />
 		{/if}
-		<KeyDataSwitcher /> -->
-		<ShortcutList />
-		<!-- <Shortcuts /> -->
-		<KeyListener />
-	</main>
-	<footer>
-		<div class="about">
-			Browsers: Chrome, Firefox, and Safari.<br />
-			OS: Windows and Mac.<br />
-			v. {version}<br />
-			<br />
-			<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
-				>Share on twitter</a
-			>
-		</div>
-		<div class="team">
-			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
-			<a href="https://github.com/Sergushka">Aleksander</a>
-		</div>
-	</footer>
+	</div>
+	<FilteredShortcutList />
+	<!-- <FullShortcutList /> -->
+	<!-- <Shortcuts /> -->
+	<KeyListener />
 </div>
+<footer>
+	<div class="about">
+		Browsers: Chrome, Firefox, and Safari.<br />
+		OS: Windows and Mac.<br />
+		v. {version}<br />
+		<br />
+		<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
+			>Share on twitter</a
+		>
+	</div>
+	<div class="team">
+		Made by <a href="https://github.com/tem-tem">Tem</a> and
+		<a href="https://github.com/Sergushka">Aleksander</a> in 2022.
+	</div>
+</footer>
 
 <style>
 	.container {
 		display: flex;
 		flex-flow: column nowrap;
-		min-height: 100vh;
+		/* min-height: 100vh; */
 	}
 	main {
-		max-width: 800px;
+		max-width: var(--max-width);
+		width: 100%;
 		margin: 0 auto;
 		flex: 1;
+	}
+	.mainKeysContainer {
+		min-height: 240px;
 	}
 	footer {
 		padding: 80px 0 30px;
@@ -108,5 +120,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		min-height: 6rem;
 	}
 </style>
