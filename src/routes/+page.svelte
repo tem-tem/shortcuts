@@ -4,7 +4,6 @@
 	import Reset from '$components/Reset.svelte';
 	import KeyListener from '$components/KeyListener.svelte';
 	import Guide from '$components/Guide.svelte';
-	import Switcher from '$components/Switcher.svelte';
 	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
 	import { keys } from '$stores/keys';
 	import DemoKeys from '$components/DemoKeys.svelte';
@@ -12,18 +11,12 @@
 	import Tooltip from '$components/Tooltip.svelte';
 
 	import { version } from '$app/environment';
-	import ShortcutList from '$components/ShortcutList/ShortcutList.svelte';
 	import FilteredShortcutList from '$components/ShortcutList/FilteredShortcutList.svelte';
-	import FullShortcutList from '$components/ShortcutList/FullShortcutList.svelte';
 
-	//   console.log(packageJson.version);
 
 	onMount(() => {
 		window.focus();
 	});
-	// read VERSION from package.json
-	// const version = import.meta.env.VITE_VERSION;
-	// console.log(import.meta)
 </script>
 
 <div class="container">
@@ -54,8 +47,6 @@
 		{/if}
 	</div>
 	<FilteredShortcutList />
-	<!-- <FullShortcutList /> -->
-	<!-- <Shortcuts /> -->
 	<KeyListener />
 </div>
 <footer>
