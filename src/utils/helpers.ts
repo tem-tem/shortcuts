@@ -1,10 +1,4 @@
-import chromeMac from '$data/chromeMac.json';
-import chromeWin from '$data/chromeWin.json';
-import firefoxMac from '$data/firefoxMac.json';
-// import mozilaMac from '$data/mozilaMac.json';
-import firefoxWin from '$data/firefoxWin.json';
-import safari from '$data/safari.json';
-import type { Browser, DemoKey, OS, ShortcutsJSON } from '$types';
+import type { DemoKey } from '$types';
 import { ACTION_KEYS } from '$constants';
 
 export const reorderKeys = (keys: KeyboardEvent[]) => {
@@ -60,17 +54,4 @@ export const getKeyList = (keys: KeyboardEvent[]) => {
 		if (k.code.includes('Key')) return k.code[3].toLocaleLowerCase();
 		return k.key.toLocaleLowerCase();
 	});
-};
-
-export const getBrowserShortcutsJSON = (browser: Browser, os: OS): ShortcutsJSON => {
-	switch (browser) {
-		case 'chrome':
-			if (os === 'mac') return chromeMac;
-			return chromeWin;
-		case 'firefox':
-			if (os === 'mac') return firefoxMac;
-			return firefoxWin;
-		case 'safari':
-			return safari;
-	}
 };

@@ -76,3 +76,27 @@ function getKeyRegex(key: string) {
 			return `(\\s|\\W|^|"|')${key}(\\s|\\W|$|"|')`;
 	}
 }
+
+export function normalizeShortcut(shortcutArray: string[][]) {
+	const keyMap: Record<string, string> = {
+		meta: 'Meta',
+		shift: 'Shift',
+		control: 'Control',
+		alt: 'Alt',
+		arrowleft: 'ArrowLeft',
+		arrowright: 'ArrowRight',
+		arrowup: 'ArrowUp',
+		arrowdown: 'ArrowDown',
+		pageup: 'PageUp',
+		pagedown: 'PageDown',
+		' ': 'Space'
+	};
+
+	return shortcutArray.map((shortcut) => {
+		for (const key in keyMap) {
+			const regex = new RegExp(getKeyRegex(key), 'gi');
+			shortcut = shortcut.map((keyName) => keyName.replace(regex, keyMap[key]));
+		}
+		return shortcut;
+	});
+}

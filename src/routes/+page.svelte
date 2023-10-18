@@ -1,11 +1,9 @@
 <script lang="ts">
 	import Keys from '$components/Keys.svelte';
-	import Shortcuts from '$components/Shortcuts.svelte';
 	import { onMount } from 'svelte';
 	import Reset from '$components/Reset.svelte';
 	import KeyListener from '$components/KeyListener.svelte';
 	import Guide from '$components/Guide.svelte';
-	import Switcher from '$components/Switcher.svelte';
 	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
 	import { keys } from '$stores/keys';
 	import DemoKeys from '$components/DemoKeys.svelte';
@@ -13,15 +11,12 @@
 	import Tooltip from '$components/Tooltip.svelte';
 
 	import { version } from '$app/environment';
+	import FilteredShortcutList from '$components/ShortcutList/FilteredShortcutList.svelte';
 
-	//   console.log(packageJson.version);
 
 	onMount(() => {
 		window.focus();
 	});
-	// read VERSION from package.json
-	// const version = import.meta.env.VITE_VERSION;
-	// console.log(import.meta)
 </script>
 
 <div class="container">
@@ -30,50 +25,60 @@
 		<Theme />
 		<div class="header">
 			<div class="about">
-				<b>Default Shortcuts</b> is a tool for searching keyboard shortcuts across browsers.<br />
+				<b>Default Shortcuts</b> is an open-source tool for searching keyboard shortcuts across
+				browsers.<br />
 			</div>
-			<Switcher />
+			<!-- <Switcher /> -->
 		</div>
 		<div class="guide">
-			<Guide />
+			{#if $keys.length > 0}
+				<KeyDataSwitcher />
+			{:else}
+				<Guide />
+			{/if}
 			<Reset />
 		</div>
+	</main>
+	<div class="mainKeysContainer">
 		{#if $keys.length > 0}
 			<Keys />
 		{:else}
 			<DemoKeys />
 		{/if}
-		<KeyDataSwitcher />
-		<Shortcuts />
-		<KeyListener />
-	</main>
-	<footer>
-		<div class="about">
-			Browsers: Chrome, Firefox, and Safari.<br />
-			OS: Windows and Mac.<br />
-			v. {version}<br />
-			<br />
-			<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
-				>Share on twitter</a
-			>
-		</div>
-		<div class="team">
-			2022 | Made by <a href="https://github.com/tem-tem">Tem</a> and
-			<a href="https://github.com/Sergushka">Aleksander</a>
-		</div>
-	</footer>
+	</div>
+	<FilteredShortcutList />
+	<KeyListener />
 </div>
+<footer>
+	<div class="about">
+		Browsers: Chrome, Firefox, and Safari.<br />
+		OS: Windows and Mac.<br />
+		v. {version}<br />
+		<br />
+		<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
+			>Share on twitter</a
+		>
+	</div>
+	<div class="team">
+		Made by <a href="https://github.com/tem-tem">Tem</a> and
+		<a href="https://github.com/Sergushka">Aleksander</a> in 2022.
+	</div>
+</footer>
 
 <style>
 	.container {
 		display: flex;
 		flex-flow: column nowrap;
-		min-height: 100vh;
+		/* min-height: 100vh; */
 	}
 	main {
-		max-width: 800px;
+		max-width: var(--max-width);
+		width: 100%;
 		margin: 0 auto;
 		flex: 1;
+	}
+	.mainKeysContainer {
+		min-height: 240px;
 	}
 	footer {
 		padding: 80px 0 30px;
@@ -89,6 +94,9 @@
 		max-width: 50%;
 		text-align: left;
 	}
+	.about b {
+		font-weight: bold;
+	}
 	.team {
 		text-align: left;
 	}
@@ -102,5 +110,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		min-height: 6rem;
 	}
 </style>

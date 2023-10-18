@@ -1,15 +1,16 @@
 {
 	"name": "browser-shortcuts",
-	"version": "0.3",
+	"version": "0.5",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
+		"dev": "npm run genJson && vite dev",
+		"build": "npm run genJson && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
+		"genJson": "node src/scripts/genJson.js",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
@@ -35,6 +36,6 @@
 		"yarn": "3.3.1"
 	},
 	"dependencies": {
-		"@vercel/analytics": "^0.1.11"
+		"@vercel/analytics": "^1.1.1"
 	}
 }

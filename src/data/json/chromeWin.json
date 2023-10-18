@@ -1,0 +1,339 @@
+{
+	"category": "browser",
+	"app": "chrome",
+	"os": "windows",
+	"shortcuts": [
+		{
+			"shortcut": [["Control", "n"]],
+			"text": "Open a new window"
+		},
+		{
+			"shortcut": [["Control", "Shift", "n"]],
+			"text": "Open a new window in Incognito mode"
+		},
+		{
+			"shortcut": [["Control", "t"]],
+			"text": "Open a new tab, and jump to it"
+		},
+		{
+			"shortcut": [["Control", "Shift", "t"]],
+			"text": "Reopen previously closed tabs in the order they were closed"
+		},
+		{
+			"shortcut": [["Control", "Tab"]],
+			"text": "Jump to the next open tab"
+		},
+		{
+			"shortcut": [["Control", "PgDn"]],
+			"text": "Jump to the next open tab"
+		},
+		{
+			"shortcut": [["Control", "Shift", "PgUp"]],
+			"text": "Jump to the previous open tab"
+		},
+		{
+			"shortcut": [["Control", "Shift", "Tab"]],
+			"text": "Jump to the previous open tab"
+		},
+		{
+			"shortcut": [["Control", "1"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "2"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "3"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "4"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "5"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "6"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "7"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "8"]],
+			"text": "Jump to a specific tab"
+		},
+		{
+			"shortcut": [["Control", "9"]],
+			"text": "Jump to the rightmost tab"
+		},
+		{
+			"shortcut": [["Alt", "Home"]],
+			"text": "Open your home page in the current tab"
+		},
+		{
+			"shortcut": [["Alt", "Left arrow"]],
+			"text": "Open the previous page from your browsing history in the current tab"
+		},
+		{
+			"shortcut": [["Alt", "Right arrow"]],
+			"text": "Open the next page from your browsing history in the current tab"
+		},
+		{
+			"shortcut": [["Control", "w"]],
+			"text": "Close the current tab"
+		},
+		{
+			"shortcut": [["Control", "F4"]],
+			"text": "Close the current tab"
+		},
+		{
+			"shortcut": [["Control", "Shift", "w"]],
+			"text": "Close the current window"
+		},
+		{
+			"shortcut": [["Alt", "F4"]],
+			"text": "Close the current window"
+		},
+		{
+			"shortcut": [["Alt", "Space"], ["n"]],
+			"text": "Minimize the current window"
+		},
+		{
+			"shortcut": [["Alt", "Space"], ["x"]],
+			"text": "Maximize the current window"
+		},
+		{
+			"shortcut": [["Alt", "f"], ["x"]],
+			"text": "Quit Google Chrome"
+		},
+		{
+			"shortcut": [["Control", "Shift", "PgDn"]],
+			"text": "Move tabs left"
+		},
+		{
+			"shortcut": [["Control", "Shift", "PgUp"]],
+			"text": "Move tabs right"
+		},
+		{
+			"shortcut": [["Alt", "f"]],
+			"text": "Open the Chrome menu"
+		},
+		{
+			"shortcut": [["Alt", "e"]],
+			"text": "Open the Chrome menu"
+		},
+		{
+			"shortcut": [["Control", "Shift", "b"]],
+			"text": "Show or hide the Bookmarks bar"
+		},
+		{
+			"shortcut": [["Control", "Shift", "o"]],
+			"text": "Open the Bookmarks Manager"
+		},
+		{
+			"shortcut": [["Control", "h"]],
+			"text": "Open the History page in a new tab"
+		},
+		{
+			"shortcut": [["Control", "j"]],
+			"text": "Open the Downloads page in a new tab"
+		},
+		{
+			"shortcut": [["Shift", "Esc"]],
+			"text": "Open the Chrome Task Manager"
+		},
+		{
+			"shortcut": [["Shift", "Alt", "t"]],
+			"text": "Set focus on the first item in the Chrome toolbar"
+		},
+		{
+			"shortcut": [["F10"]],
+			"text": "Set focus on the rightmost item in the Chrome toolbar"
+		},
+		{
+			"shortcut": [["F6"]],
+			"text": "Switch focus to unfocused dialog (if showing) and all toolbars"
+		},
+		{
+			"shortcut": [["Control", "f"]],
+			"text": "Open the Find Bar to search the current page"
+		},
+		{
+			"shortcut": [["F3"]],
+			"text": "Open the Find Bar to search the current page"
+		},
+		{
+			"shortcut": [["Control", "g"]],
+			"text": "Jump to the next match to your Find Bar search"
+		},
+		{
+			"shortcut": [["Control", "Shift", "g"]],
+			"text": "Jump to the previous match to your Find Bar search"
+		},
+		{
+			"shortcut": [["Control", "Shift", "j"]],
+			"text": "Open Developer Tools"
+		},
+		{
+			"shortcut": [["F12"]],
+			"text": "Open Developer Tools"
+		},
+		{
+			"shortcut": [["Control", "Shift", "Delete"]],
+			"text": "Open the Clear Browsing Data options"
+		},
+		{
+			"shortcut": [["F1"]],
+			"text": "Open the Chrome Help Center in a new tab"
+		},
+		{
+			"shortcut": [["Control", "Shift", "m"]],
+			"text": "Log in a different user or browse as a Guest"
+		},
+		{
+			"shortcut": [["Alt", "Shift", "i"]],
+			"text": "Open a feedback form"
+		},
+		{
+			"shortcut": [["F7"]],
+			"text": "Turn on caret browsing"
+		},
+		{
+			"shortcut": [["Control", "F6"]],
+			"text": "Skip to web contents"
+		},
+		{
+			"shortcut": [["Alt", "Shift", "a"]],
+			"text": "Focus on inactive dialogs"
+		},
+		{
+			"shortcut": [["F6"]],
+			"text": "Jump to the address bar"
+		},
+		{
+			"shortcut": [["Control", "l"]],
+			"text": "Jump to the address bar"
+		},
+		{
+			"shortcut": [["Alt", "d"]],
+			"text": "Jump to the address bar"
+		},
+		{
+			"shortcut": [["Control", "k"]],
+			"text": "Search from anywhere on the page"
+		},
+		{
+			"shortcut": [["Control", "e"]],
+			"text": "Search from anywhere on the page"
+		},
+		{
+			"shortcut": [["Control", "F5"]],
+			"text": "Move cursor to the address bar"
+		},
+		{
+			"shortcut": [["Control", "p"]],
+			"text": "Open options to print the current page"
+		},
+		{
+			"shortcut": [["Control", "s"]],
+			"text": "Open options to save the current page"
+		},
+		{
+			"shortcut": [["F5"]],
+			"text": "Reload the current page"
+		},
+		{
+			"shortcut": [["Control", "r"]],
+			"text": "Reload the current page"
+		},
+		{
+			"shortcut": [["Shift", "F5"]],
+			"text": "Reload the current page, ignoring cached content"
+		},
+		{
+			"shortcut": [["Control", "Shift", "r"]],
+			"text": "Reload the current page, ignoring cached content"
+		},
+		{
+			"shortcut": [["Esc"]],
+			"text": "Stop the page loading"
+		},
+		{
+			"shortcut": [["Tab"]],
+			"text": "Browse clickable items moving forward"
+		},
+		{
+			"shortcut": [["Shift", "Tab"]],
+			"text": "Browse clickable items moving backward"
+		},
+		{
+			"shortcut": [["Control", "o"]],
+			"text": "Open a file from your computer in Chrome"
+		},
+		{
+			"shortcut": [["Control", "u"]],
+			"text": "Display non-editable HTML source code for the current page"
+		},
+		{
+			"shortcut": [["Control", "d"]],
+			"text": "Save your current webpage as a bookmark"
+		},
+		{
+			"shortcut": [["Control", "Shift", "d"]],
+			"text": "Save all open tabs as bookmarks in a new folder"
+		},
+		{
+			"shortcut": [["F11"]],
+			"text": "Turn full-screen mode on or off"
+		},
+		{
+			"shortcut": [["Control", "0"]],
+			"text": "Return everything on the page to default size"
+		},
+		{
+			"shortcut": [["Space"]],
+			"text": "Scroll down a webpage, a screen at a time"
+		},
+		{
+			"shortcut": [["PgDn"]],
+			"text": "Scroll down a webpage, a screen at a time"
+		},
+		{
+			"shortcut": [["PgUp"]],
+			"text": "Scroll up a webpage, a screen at a time"
+		},
+		{
+			"shortcut": [["Shift", "Space"]],
+			"text": "Scroll up a webpage, a screen at a time"
+		},
+		{
+			"shortcut": [["Home"]],
+			"text": "Go to the top of the page"
+		},
+		{
+			"shortcut": [["End"]],
+			"text": "Go to the bottom of the page"
+		},
+		{
+			"shortcut": [["Control", "Left arrow"]],
+			"text": "Move your cursor to the beginning of the previous word in a text field"
+		},
+		{
+			"shortcut": [["Control", "Right arrow"]],
+			"text": "Move your cursor to the next word"
+		},
+		{
+			"shortcut": [["Control", "Backspace"]],
+			"text": "Delete the previous word in a text field"
+		},
+		{
+			"shortcut": [["Alt", "Home"]],
+			"text": "Open the Home page in the current tab"
+		}
+	]
+}
