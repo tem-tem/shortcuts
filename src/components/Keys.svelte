@@ -16,7 +16,8 @@
 
 		min-height: 100px;
 
-		gap: 0.5em;
+		gap: 1em;
+		row-gap: 2rem;
 		padding: 0.5em;
 		margin: 20px;
 

@@ -25,7 +25,7 @@
 							<span class="app">
 								<Icon name={app.app} src={`icons/apps/${app.app}.png`} />
 							</span>
-							<div class="text">{app.text}</div>
+							<div class="text textBody">{app.text}</div>
 							<span class="os">
 								<Icon name={app.os} src={`icons/os/${app.os}.png`} />
 							</span>
@@ -53,7 +53,7 @@
 	.shortcutListItem {
 		/* margin-bottom: 6rem; */
 
-		outline: 1px dotted var(--main-text-color);
+		border: 1px dotted var(--main-text-color-opacity-3);
 		border-radius: 1rem;
 		overflow: hidden;
 
@@ -72,7 +72,7 @@
 	.keyGroup {
 		display: flex;
 
-		padding: 2rem;
+		padding: 1rem 2rem 2rem;
 
 		margin-right: 2rem;
 	}
@@ -98,12 +98,12 @@
 
 		border-radius: 0.3rem;
 
-		color: var(--main-button-color);
-		background-color: var(--main-buttonT-color);
+		color: var(--main-text-color);
+		background-color: var(--main-text-color-opacity-1);
 
 		text-transform: uppercase;
 
-		box-shadow: 0 0 0 0.2rem var(--main-button-color), 0 0.3rem 0 0.2rem var(--main-button-color);
+		box-shadow: 0 0.3rem 0 0.2rem var(--main-text-color-opacity-2);
 	}
 
 	.appList {
@@ -120,7 +120,7 @@
 		padding: 0 1rem;
 		justify-content: space-between;
 
-		border-top: 1px dotted var(--main-text-color);
+		border-top: 1px dotted var(--main-text-color-opacity-3);
 	}
 
 	.appListItem:last-child {
@@ -141,23 +141,10 @@
 		opacity: 0.5;
 	}
 
-	.metadata {
-		display: flex;
-		align-items: center;
-		/* gap: 0.5rem; */
-
-		text-transform: capitalize;
-		font-size: 1rem;
-
-		/* outline: 1px dotted var(--main-text-color); */
-		border-radius: 1rem;
-		/* margin-left: -0.2rem; */
-	}
-
 	.text {
-		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		/* font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 		flex: 1;
-		font-size: 1.2rem;
+		/* font-size: 1.2rem; */
 		/* margin-left: -0.3rem; */
 	}
 </style>

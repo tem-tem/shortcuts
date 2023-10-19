@@ -10,3 +10,11 @@ themeName.subscribe((value) => {
 		localStorage.setItem(LS_KEYS.themeName, value);
 	}
 });
+
+export const isLight = writable<boolean>(true);
+
+isLight.subscribe((value) => {
+	if (browser) {
+		localStorage.setItem(LS_KEYS.isLight, String(value));
+	}
+});

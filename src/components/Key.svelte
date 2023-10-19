@@ -25,7 +25,7 @@
 			</span>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.key)}>
-				<span>.key:</span><span class="rowValue">{key.key}</span>
+				<span>.key:</span><span class="rowValue">"{key.key}"</span>
 			</span>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<span class="row" on:click={copyData(key.keyCode)}>
@@ -38,23 +38,30 @@
 <style>
 	kbd {
 		color: var(--main-button-color);
-		background-color: var(--main-buttonT-color);
+		background: linear-gradient(
+			var(--main-button-color-opacity-0),
+			var(--main-button-color-opacity-2)
+		);
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
-		min-width: 3em;
+		min-width: 10em;
 		min-height: 3em;
 
 		padding: 0.5em 0.8em;
 
-		border: 5px solid;
+		border: 1px solid;
+		/* border: 5px solid; */
 		border-radius: 24px;
+		box-shadow: 0 0 0 7px, 0 15px 0 7px;
 	}
 	.smallKBD {
-		border: 4px solid;
+		/* border: 4px solid; */
 		border-radius: 16px;
+		min-width: 3em;
+		box-shadow: 0 0 0 7px, 0 10px 0 7px;
 	}
 	kbd .label {
 		font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,14 +72,15 @@
 	}
 
 	kbd .labelOnly {
-		min-width: 42px;
-		min-height: 36px;
+		min-width: 52px;
+		min-height: 52px;
 	}
 
 	.data {
 		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
+		gap: 0.2rem;
 	}
 
 	.data .row {

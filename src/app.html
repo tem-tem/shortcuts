@@ -24,10 +24,9 @@
 				src: url('/fonts/Poppins-Regular.ttf') format('truetype');
 			}
 			:root {
-				--main-bg-color: #f9dbbd;
+				--main-bg-color: #ececec;
 				--main-text-color: #0d0628;
-				--main-button-color: #9a348e;
-				--main-button-color-t: #9a348e20;
+				--main-button-color: #de3a1e;
 
 				--max-width: 800px;
 			}
@@ -64,6 +63,11 @@
 			h3 {
 				margin: 1rem;
 				font-size: 2rem;
+			}
+
+			.textBody {
+				font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-size: 1.2rem;
 			}
 		</style>
 		<title>Default Shortcuts for Browsers: Chrome, Safari, Firefox</title>
@@ -109,8 +113,6 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div class="bodyContainer">
-			%sveltekit.body%
-		</div>
+		<div class="bodyContainer">%sveltekit.body%</div>
 	</body>
 </html>

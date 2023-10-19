@@ -3,6 +3,10 @@
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
+
+	export let data;
 </script>
 
-<slot />
+<div style={data.cssVars}>
+	<slot />
+</div>
