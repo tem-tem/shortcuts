@@ -30,11 +30,7 @@
 			</div>
 		</div>
 		<div class="guide">
-			{#if $keys.length > 0}
-				<KeyDataSwitcher />
-			{:else}
-				<Guide />
-			{/if}
+			<Guide />
 			<Reset />
 		</div>
 	</main>
@@ -49,18 +45,13 @@
 	<KeyListener />
 </div>
 <footer>
-	<div class="about">
-		Browsers: Chrome, Firefox, and Safari.<br />
-		OS: Windows and Mac.<br />
-		v. {version}<br />
-		<br />
-		<a href="https://twitter.com/intent/tweet?text=Check%20out%20DefaultShortcuts.com%20-%20"
-			>Share on twitter</a
-		>
+	<div>
+		<KeyDataSwitcher />
 	</div>
-	<div class="team">
-		Made by <a href="https://github.com/tem-tem">Tem</a> and
-		<a href="https://github.com/Sergushka">Aleksander</a> in 2022.
+	<div class="meta">
+		<div class="version">
+			v. {version}
+		</div>
 	</div>
 </footer>
 
@@ -69,6 +60,7 @@
 		display: flex;
 		flex-flow: column nowrap;
 		/* min-height: 100vh; */
+		margin-bottom: 5rem;
 	}
 	main {
 		max-width: var(--max-width);
@@ -80,13 +72,21 @@
 		min-height: 240px;
 	}
 	footer {
-		padding: 80px 0 30px;
-		max-width: 800px;
-		margin: 0 auto;
-		width: 100%;
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+		width: 100vw;
+		background-color: var(--main-bg-color);
+
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+
+		border-top: 1px solid var(--main-text-color-opacity-3);
+
+		padding: 0.5rem 1rem;
+	}
+	.meta {
+		display: flex;
 		gap: 2rem;
 	}
 
@@ -96,12 +96,10 @@
 		height: var(--size);
 		border-radius: 8px;
 		background-color: var(--main-button-color);
-		/* border: 4px solid var(--main-button-color); */
 	}
 	.logo {
 		display: flex;
 		gap: 0.2rem;
-		/* padding: 1rem 0 0.5rem; */
 	}
 	.about {
 		max-width: 50%;
@@ -114,16 +112,11 @@
 	.about b {
 		font-weight: bold;
 	}
-	.team {
-		text-align: left;
-	}
 	.header {
 		display: flex;
 		justify-content: space-between;
-		/* height: 30px; */
 	}
 	.guide {
-		/* margin: 40px 0; */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

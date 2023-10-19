@@ -3,16 +3,14 @@
 	import { fullInfo } from '$stores/ui';
 </script>
 
-{#if $keys.length > 0}
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="switcherContainer" on:click={() => ($fullInfo = !$fullInfo)}>
-		<div class="switcher">
-			<input type="checkbox" id="switch" bind:checked={$fullInfo} />
-			<label for="switch" class:active={$fullInfo} />
-		</div>
-		<div>Display full key data</div>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="switcherContainer" on:click={() => ($fullInfo = !$fullInfo)}>
+	<div class="switcher">
+		<input type="checkbox" id="switch" bind:checked={$fullInfo} />
+		<label for="switch" class:active={$fullInfo} />
 	</div>
-{/if}
+	<div>Display full key data</div>
+</div>
 
 <style>
 	.switcherContainer {
