@@ -1,17 +1,16 @@
 <script>
 	import { keys } from '$stores/keys';
 	import { fullInfo } from '$stores/ui';
-	import { fade } from 'svelte/transition';
 </script>
 
 {#if $keys.length > 0}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="switcherContainer" on:click={() => ($fullInfo = !$fullInfo)}>
-		<div>Display full key data</div>
 		<div class="switcher">
 			<input type="checkbox" id="switch" bind:checked={$fullInfo} />
-			<label for="switch" class:active={$fullInfo}>Toggle</label>
+			<label for="switch" class:active={$fullInfo} />
 		</div>
+		<div>Display full key data</div>
 	</div>
 {/if}
 
@@ -36,9 +35,9 @@
 	label {
 		pointer-events: none;
 		text-indent: -9999px;
-		width: 4em;
+		width: 3.5em;
 		height: 2em;
-		background: var(--main-button-color-opacity-5);
+		background: var(--main-text-color-opacity-5);
 		display: block;
 		border-radius: 2em;
 		position: relative;
@@ -52,12 +51,12 @@
 		content: '';
 		position: absolute;
 		top: 0.1em;
-		left: 0.1em;
+		left: 0.2em;
 		width: 1.8em;
 		height: 1.8em;
 		background: var(--main-bg-color);
 		border-radius: 2em;
-		transition: 0.3s;
+		transition: 0.25s;
 	}
 
 	/* input:checked + label {
@@ -65,7 +64,7 @@
 	} */
 
 	input:checked + label:after {
-		left: calc(100% - 0.3em);
+		left: calc(100% - 0.07rem);
 		transform: translateX(-100%);
 	}
 

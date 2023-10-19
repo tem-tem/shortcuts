@@ -7,7 +7,6 @@
 	import KeyDataSwitcher from '$components/KeyDataSwitcher.svelte';
 	import { keys } from '$stores/keys';
 	import DemoKeys from '$components/DemoKeys.svelte';
-	import Theme from '$components/Theme.svelte';
 	import Tooltip from '$components/Tooltip.svelte';
 
 	import { version } from '$app/environment';
@@ -21,13 +20,14 @@
 <div class="container">
 	<main>
 		<Tooltip />
-		<Theme />
 		<div class="header">
 			<div class="about">
-				<b>Default Shortcuts</b> is an open-source tool for searching keyboard shortcuts across
-				browsers.<br />
+				<div class="logo">
+					<div class="block" />
+					<div class="block" />
+				</div>
+				<b>Default Shortcuts</b><br />
 			</div>
-			<!-- <Switcher /> -->
 		</div>
 		<div class="guide">
 			{#if $keys.length > 0}
@@ -89,9 +89,27 @@
 		align-items: flex-end;
 		gap: 2rem;
 	}
+
+	.block {
+		--size: 24px;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 8px;
+		background-color: var(--main-button-color);
+		/* border: 4px solid var(--main-button-color); */
+	}
+	.logo {
+		display: flex;
+		gap: 0.2rem;
+		/* padding: 1rem 0 0.5rem; */
+	}
 	.about {
 		max-width: 50%;
 		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding-top: 1rem;
 	}
 	.about b {
 		font-weight: bold;

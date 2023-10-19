@@ -53,7 +53,7 @@
 	.shortcutListItem {
 		/* margin-bottom: 6rem; */
 
-		outline: 1px dotted var(--main-text-color);
+		border: 1px dotted var(--main-text-color-opacity-3);
 		border-radius: 1rem;
 		overflow: hidden;
 
@@ -120,7 +120,7 @@
 		padding: 0 1rem;
 		justify-content: space-between;
 
-		border-top: 1px dotted var(--main-text-color);
+		border-top: 1px dotted var(--main-text-color-opacity-3);
 	}
 
 	.appListItem:last-child {
